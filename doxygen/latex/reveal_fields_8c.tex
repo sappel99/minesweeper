@@ -1,0 +1,112 @@
+\hypertarget{reveal_fields_8c}{}\doxysection{C\+:/\+Users/simon/\+C\+Lion\+Projects/bic1\+\_\+prg\+\_\+tasks/projects/130\+\_\+minesweeper/reveal\+Fields.c File Reference}
+\label{reveal_fields_8c}\index{C:/Users/simon/CLionProjects/bic1\_prg\_tasks/projects/130\_minesweeper/revealFields.c@{C:/Users/simon/CLionProjects/bic1\_prg\_tasks/projects/130\_minesweeper/revealFields.c}}
+
+
+These functions are used for revealing fields.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$memory.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}reveal\+Fields.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}checking\+Functions.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{reveal_fields_8c_a7e22039bb70308a0489a390bab972a0d}{reveal\+Around\+XY}} (struct \mbox{\hyperlink{structmatrix}{matrix}} list, int x\+In, int y\+In)
+\begin{DoxyCompactList}\small\item\em This function reveals all Fields around a given coordinate. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{reveal_fields_8c_ab731629d8caf1014dad3db6d8c5b49a5}{find\+More\+Zeroes}} (struct \mbox{\hyperlink{structmatrix}{matrix}} list, int rows)
+\begin{DoxyCompactList}\small\item\em This function trys to find more zeroes if a new field has been opened, which was a zero. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{reveal_fields_8c_ae603a80c3e2bf170a9ff023cb2bab39b}{turn\+Public\+Zero\+Into\+Space}} (struct \mbox{\hyperlink{structmatrix}{matrix}} list)
+\begin{DoxyCompactList}\small\item\em This function turns a public zero into a better readable blank space. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{reveal_fields_8c_a7b47a59db5b7cf559d232e71e40e9988}{read\+And\+Reveal}} (struct \mbox{\hyperlink{structmatrix}{matrix}} list, int rows)
+\begin{DoxyCompactList}\small\item\em This function reads a coordinate from the user and either opens it or marks (?) it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+These functions are used for revealing fields. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{reveal_fields_8c_ab731629d8caf1014dad3db6d8c5b49a5}\label{reveal_fields_8c_ab731629d8caf1014dad3db6d8c5b49a5}} 
+\index{revealFields.c@{revealFields.c}!findMoreZeroes@{findMoreZeroes}}
+\index{findMoreZeroes@{findMoreZeroes}!revealFields.c@{revealFields.c}}
+\doxysubsubsection{\texorpdfstring{findMoreZeroes()}{findMoreZeroes()}}
+{\footnotesize\ttfamily int find\+More\+Zeroes (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmatrix}{matrix}}}]{list,  }\item[{int}]{rows }\end{DoxyParamCaption})}
+
+
+
+This function trys to find more zeroes if a new field has been opened, which was a zero. 
+
+In case of big groups of zeroes this function opens them all.
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & the existing matrix list \\
+\hline
+{\em rows} & the number of rows \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful 
+\end{DoxyReturn}
+\mbox{\Hypertarget{reveal_fields_8c_a7b47a59db5b7cf559d232e71e40e9988}\label{reveal_fields_8c_a7b47a59db5b7cf559d232e71e40e9988}} 
+\index{revealFields.c@{revealFields.c}!readAndReveal@{readAndReveal}}
+\index{readAndReveal@{readAndReveal}!revealFields.c@{revealFields.c}}
+\doxysubsubsection{\texorpdfstring{readAndReveal()}{readAndReveal()}}
+{\footnotesize\ttfamily int read\+And\+Reveal (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmatrix}{matrix}}}]{list,  }\item[{int}]{rows }\end{DoxyParamCaption})}
+
+
+
+This function reads a coordinate from the user and either opens it or marks (?) it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & the existing matrix list \\
+\hline
+{\em rows} & the number of rows \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful 
+\end{DoxyReturn}
+\mbox{\Hypertarget{reveal_fields_8c_a7e22039bb70308a0489a390bab972a0d}\label{reveal_fields_8c_a7e22039bb70308a0489a390bab972a0d}} 
+\index{revealFields.c@{revealFields.c}!revealAroundXY@{revealAroundXY}}
+\index{revealAroundXY@{revealAroundXY}!revealFields.c@{revealFields.c}}
+\doxysubsubsection{\texorpdfstring{revealAroundXY()}{revealAroundXY()}}
+{\footnotesize\ttfamily int reveal\+Around\+XY (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmatrix}{matrix}}}]{list,  }\item[{int}]{x\+In,  }\item[{int}]{y\+In }\end{DoxyParamCaption})}
+
+
+
+This function reveals all Fields around a given coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & the existing matrix list \\
+\hline
+{\em x\+In} & the x coordinate \\
+\hline
+{\em y\+In} & the y coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+count number of new fields opened 
+\end{DoxyReturn}
+\mbox{\Hypertarget{reveal_fields_8c_ae603a80c3e2bf170a9ff023cb2bab39b}\label{reveal_fields_8c_ae603a80c3e2bf170a9ff023cb2bab39b}} 
+\index{revealFields.c@{revealFields.c}!turnPublicZeroIntoSpace@{turnPublicZeroIntoSpace}}
+\index{turnPublicZeroIntoSpace@{turnPublicZeroIntoSpace}!revealFields.c@{revealFields.c}}
+\doxysubsubsection{\texorpdfstring{turnPublicZeroIntoSpace()}{turnPublicZeroIntoSpace()}}
+{\footnotesize\ttfamily int turn\+Public\+Zero\+Into\+Space (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmatrix}{matrix}}}]{list }\end{DoxyParamCaption})}
+
+
+
+This function turns a public zero into a better readable blank space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & the existing matrix list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful 
+\end{DoxyReturn}

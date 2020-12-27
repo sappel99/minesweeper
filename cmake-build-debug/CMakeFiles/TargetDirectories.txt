@@ -1,0 +1,3 @@
+/cygdrive/c/Users/simon/CLionProjects/bic1_prg_tasks/projects/130_minesweeper/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/Users/simon/CLionProjects/bic1_prg_tasks/projects/130_minesweeper/cmake-build-debug/CMakeFiles/130_minesweeper.dir
+/cygdrive/c/Users/simon/CLionProjects/bic1_prg_tasks/projects/130_minesweeper/cmake-build-debug/CMakeFiles/edit_cache.dir

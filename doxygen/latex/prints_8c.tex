@@ -1,0 +1,163 @@
+\hypertarget{prints_8c}{}\doxysection{C\+:/\+Users/simon/\+C\+Lion\+Projects/bic1\+\_\+prg\+\_\+tasks/projects/130\+\_\+minesweeper/prints.c File Reference}
+\label{prints_8c}\index{C:/Users/simon/CLionProjects/bic1\_prg\_tasks/projects/130\_minesweeper/prints.c@{C:/Users/simon/CLionProjects/bic1\_prg\_tasks/projects/130\_minesweeper/prints.c}}
+
+
+These functions are used for printing matrixes, warnings, errors or informations.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$memory.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}prints.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{prints_8c_ac301060d4c3ff211e5a5a451696c16d2}{print\+Structure}} (struct \mbox{\hyperlink{structmatrix}{matrix}} list)
+\begin{DoxyCompactList}\small\item\em This function prints the design idea behind the matrix. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{prints_8c_a9da04970f8029c42e00913db85bed270}{print\+Warn}} (char $\ast$text)
+\begin{DoxyCompactList}\small\item\em Prints a yellow colored text to warn. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{prints_8c_ab8e966b12ad31f254cf679d48520d488}{print\+Error}} (char $\ast$text)
+\begin{DoxyCompactList}\small\item\em Prints a red colored text to show an error. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{prints_8c_a0934dc1a1f500bec39918061ab3650e7}{print\+Info}} (char $\ast$text)
+\begin{DoxyCompactList}\small\item\em Prints a green colored text to show info. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{prints_8c_a8e1b3018d60540a60d80dc9dd35f1bc9}{print\+Public}} (struct \mbox{\hyperlink{structmatrix}{matrix}} list)
+\begin{DoxyCompactList}\small\item\em Prints the public matrix. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{prints_8c_a0c0e42918a62eaa360ef2a550fab106e}{print\+Hidden}} (struct \mbox{\hyperlink{structmatrix}{matrix}} list)
+\begin{DoxyCompactList}\small\item\em Prints the hidden/secret matrix. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{prints_8c_aff976c4877918f9873903a137f262119}{print\+Mine\+Info}} (struct \mbox{\hyperlink{structmatrix}{matrix}} list, int mines)
+\begin{DoxyCompactList}\small\item\em Prints amount of mines and amount of mines marked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+These functions are used for printing matrixes, warnings, errors or informations. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{prints_8c_ab8e966b12ad31f254cf679d48520d488}\label{prints_8c_ab8e966b12ad31f254cf679d48520d488}} 
+\index{prints.c@{prints.c}!printError@{printError}}
+\index{printError@{printError}!prints.c@{prints.c}}
+\doxysubsubsection{\texorpdfstring{printError()}{printError()}}
+{\footnotesize\ttfamily int print\+Error (\begin{DoxyParamCaption}\item[{char $\ast$}]{text }\end{DoxyParamCaption})}
+
+
+
+Prints a red colored text to show an error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & the given text \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful 
+\end{DoxyReturn}
+\mbox{\Hypertarget{prints_8c_a0c0e42918a62eaa360ef2a550fab106e}\label{prints_8c_a0c0e42918a62eaa360ef2a550fab106e}} 
+\index{prints.c@{prints.c}!printHidden@{printHidden}}
+\index{printHidden@{printHidden}!prints.c@{prints.c}}
+\doxysubsubsection{\texorpdfstring{printHidden()}{printHidden()}}
+{\footnotesize\ttfamily int print\+Hidden (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmatrix}{matrix}}}]{list }\end{DoxyParamCaption})}
+
+
+
+Prints the hidden/secret matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & the existing matrix list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful 
+\end{DoxyReturn}
+\mbox{\Hypertarget{prints_8c_a0934dc1a1f500bec39918061ab3650e7}\label{prints_8c_a0934dc1a1f500bec39918061ab3650e7}} 
+\index{prints.c@{prints.c}!printInfo@{printInfo}}
+\index{printInfo@{printInfo}!prints.c@{prints.c}}
+\doxysubsubsection{\texorpdfstring{printInfo()}{printInfo()}}
+{\footnotesize\ttfamily int print\+Info (\begin{DoxyParamCaption}\item[{char $\ast$}]{text }\end{DoxyParamCaption})}
+
+
+
+Prints a green colored text to show info. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & the given text \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful 
+\end{DoxyReturn}
+\mbox{\Hypertarget{prints_8c_aff976c4877918f9873903a137f262119}\label{prints_8c_aff976c4877918f9873903a137f262119}} 
+\index{prints.c@{prints.c}!printMineInfo@{printMineInfo}}
+\index{printMineInfo@{printMineInfo}!prints.c@{prints.c}}
+\doxysubsubsection{\texorpdfstring{printMineInfo()}{printMineInfo()}}
+{\footnotesize\ttfamily int print\+Mine\+Info (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmatrix}{matrix}}}]{list,  }\item[{int}]{mines }\end{DoxyParamCaption})}
+
+
+
+Prints amount of mines and amount of mines marked. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & the existing matrix list \\
+\hline
+{\em mines} & the amount of mines in the game \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful 
+\end{DoxyReturn}
+\mbox{\Hypertarget{prints_8c_a8e1b3018d60540a60d80dc9dd35f1bc9}\label{prints_8c_a8e1b3018d60540a60d80dc9dd35f1bc9}} 
+\index{prints.c@{prints.c}!printPublic@{printPublic}}
+\index{printPublic@{printPublic}!prints.c@{prints.c}}
+\doxysubsubsection{\texorpdfstring{printPublic()}{printPublic()}}
+{\footnotesize\ttfamily int print\+Public (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmatrix}{matrix}}}]{list }\end{DoxyParamCaption})}
+
+
+
+Prints the public matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & the existing matrix list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful 
+\end{DoxyReturn}
+\mbox{\Hypertarget{prints_8c_ac301060d4c3ff211e5a5a451696c16d2}\label{prints_8c_ac301060d4c3ff211e5a5a451696c16d2}} 
+\index{prints.c@{prints.c}!printStructure@{printStructure}}
+\index{printStructure@{printStructure}!prints.c@{prints.c}}
+\doxysubsubsection{\texorpdfstring{printStructure()}{printStructure()}}
+{\footnotesize\ttfamily int print\+Structure (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmatrix}{matrix}}}]{list }\end{DoxyParamCaption})}
+
+
+
+This function prints the design idea behind the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & the existing matrix list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful 
+\end{DoxyReturn}
+\mbox{\Hypertarget{prints_8c_a9da04970f8029c42e00913db85bed270}\label{prints_8c_a9da04970f8029c42e00913db85bed270}} 
+\index{prints.c@{prints.c}!printWarn@{printWarn}}
+\index{printWarn@{printWarn}!prints.c@{prints.c}}
+\doxysubsubsection{\texorpdfstring{printWarn()}{printWarn()}}
+{\footnotesize\ttfamily int print\+Warn (\begin{DoxyParamCaption}\item[{char $\ast$}]{text }\end{DoxyParamCaption})}
+
+
+
+Prints a yellow colored text to warn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & the given text \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful 
+\end{DoxyReturn}

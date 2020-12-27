@@ -1,0 +1,62 @@
+\hypertarget{minesweeper_8h}{}\doxysection{C\+:/\+Users/simon/\+C\+Lion\+Projects/bic1\+\_\+prg\+\_\+tasks/projects/130\+\_\+minesweeper/minesweeper.h File Reference}
+\label{minesweeper_8h}\index{C:/Users/simon/CLionProjects/bic1\_prg\_tasks/projects/130\_minesweeper/minesweeper.h@{C:/Users/simon/CLionProjects/bic1\_prg\_tasks/projects/130\_minesweeper/minesweeper.h}}
+
+
+Main header file of the game minesweeper.  
+
+
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmatrix}{matrix}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{minesweeper_8h_a5f75e923fd544ee4af222be4b3604839}{free\+\_\+list}} (struct \mbox{\hyperlink{structmatrix}{matrix}} $\ast$start)
+\begin{DoxyCompactList}\small\item\em Frees all elements in the struct matrix list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{minesweeper_8h_a48f37c08a9b277d9ede8155b5c3634e3}{random\+Number}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Returns a random number between x and y. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main header file of the game minesweeper. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{minesweeper_8h_a5f75e923fd544ee4af222be4b3604839}\label{minesweeper_8h_a5f75e923fd544ee4af222be4b3604839}} 
+\index{minesweeper.h@{minesweeper.h}!free\_list@{free\_list}}
+\index{free\_list@{free\_list}!minesweeper.h@{minesweeper.h}}
+\doxysubsubsection{\texorpdfstring{free\_list()}{free\_list()}}
+{\footnotesize\ttfamily void free\+\_\+list (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmatrix}{matrix}} $\ast$}]{start }\end{DoxyParamCaption})}
+
+
+
+Frees all elements in the struct matrix list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & The matrix list to be freed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{minesweeper_8h_a48f37c08a9b277d9ede8155b5c3634e3}\label{minesweeper_8h_a48f37c08a9b277d9ede8155b5c3634e3}} 
+\index{minesweeper.h@{minesweeper.h}!randomNumber@{randomNumber}}
+\index{randomNumber@{randomNumber}!minesweeper.h@{minesweeper.h}}
+\doxysubsubsection{\texorpdfstring{randomNumber()}{randomNumber()}}
+{\footnotesize\ttfamily int random\+Number (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Returns a random number between x and y. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Smallest possible number \\
+\hline
+{\em y} & Biggest possible number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the random number generated 
+\end{DoxyReturn}

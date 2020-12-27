@@ -1,0 +1,91 @@
+\hypertarget{minesweeper_8c}{}\doxysection{C\+:/\+Users/simon/\+C\+Lion\+Projects/bic1\+\_\+prg\+\_\+tasks/projects/130\+\_\+minesweeper/minesweeper.c File Reference}
+\label{minesweeper_8c}\index{C:/Users/simon/CLionProjects/bic1\_prg\_tasks/projects/130\_minesweeper/minesweeper.c@{C:/Users/simon/CLionProjects/bic1\_prg\_tasks/projects/130\_minesweeper/minesweeper.c}}
+
+
+This is the main C file of the game minesweeper.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$memory.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}minesweeper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}prints.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}generate\+Playfield.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}reveal\+Fields.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}checking\+Functions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}player\+Info.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{minesweeper_8c_a5f75e923fd544ee4af222be4b3604839}{free\+\_\+list}} (struct \mbox{\hyperlink{structmatrix}{matrix}} $\ast$start)
+\begin{DoxyCompactList}\small\item\em Frees all elements in the struct matrix list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{minesweeper_8c_a48f37c08a9b277d9ede8155b5c3634e3}{random\+Number}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Returns a random number between x and y. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{minesweeper_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Main function for minesweeper, calling all functions needed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the main C file of the game minesweeper. 
+
+Run this program with 2 arguments given, first a square matrix eg 5x5 or 15x5 and second a one to two digit number of mines.
+
+e.\+g. {\ttfamily }.\mbox{\hyperlink{minesweeper_8c}{minesweeper.\+c}} 10x10 20 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{minesweeper_8c_a5f75e923fd544ee4af222be4b3604839}\label{minesweeper_8c_a5f75e923fd544ee4af222be4b3604839}} 
+\index{minesweeper.c@{minesweeper.c}!free\_list@{free\_list}}
+\index{free\_list@{free\_list}!minesweeper.c@{minesweeper.c}}
+\doxysubsubsection{\texorpdfstring{free\_list()}{free\_list()}}
+{\footnotesize\ttfamily void free\+\_\+list (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmatrix}{matrix}} $\ast$}]{start }\end{DoxyParamCaption})}
+
+
+
+Frees all elements in the struct matrix list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & The matrix list to be freed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{minesweeper_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{minesweeper_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{minesweeper.c@{minesweeper.c}!main@{main}}
+\index{main@{main}!minesweeper.c@{minesweeper.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Main function for minesweeper, calling all functions needed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of arguments given \\
+\hline
+{\em argv} & Value of arguments given \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 when {\ttfamily E\+X\+I\+T.\+S\+U\+C\+C\+E\+SS} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{minesweeper_8c_a48f37c08a9b277d9ede8155b5c3634e3}\label{minesweeper_8c_a48f37c08a9b277d9ede8155b5c3634e3}} 
+\index{minesweeper.c@{minesweeper.c}!randomNumber@{randomNumber}}
+\index{randomNumber@{randomNumber}!minesweeper.c@{minesweeper.c}}
+\doxysubsubsection{\texorpdfstring{randomNumber()}{randomNumber()}}
+{\footnotesize\ttfamily int random\+Number (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Returns a random number between x and y. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Smallest possible number \\
+\hline
+{\em y} & Biggest possible number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the random number generated 
+\end{DoxyReturn}

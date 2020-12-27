@@ -1,0 +1,4 @@
+C:\Users\simon\AppData\Local\JetBrains\CLion2020.2\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_CXX_FLAGS=-Wall -Wextra -pedantic -Wno-unused-paramete" -G "CodeBlocks - Unix Makefiles" /cygdrive/c/Users/simon/CLionProjects/bic1_prg_tasks/projects/130_minesweeper
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /cygdrive/c/Users/simon/CLionProjects/bic1_prg_tasks/projects/130_minesweeper/cmake-build-debug

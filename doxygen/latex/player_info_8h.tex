@@ -1,0 +1,82 @@
+\hypertarget{player_info_8h}{}\doxysection{C\+:/\+Users/simon/\+C\+Lion\+Projects/bic1\+\_\+prg\+\_\+tasks/projects/130\+\_\+minesweeper/player\+Info.h File Reference}
+\label{player_info_8h}\index{C:/Users/simon/CLionProjects/bic1\_prg\_tasks/projects/130\_minesweeper/playerInfo.h@{C:/Users/simon/CLionProjects/bic1\_prg\_tasks/projects/130\_minesweeper/playerInfo.h}}
+
+
+Header file for the functions, which are used for loading and saving player infos.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{player_info_8h_a4c252d74b54f8800de4b747fc0a31d7a}{ask\+Player\+Info}} (char eingabe\mbox{[}256\mbox{]})
+\item 
+int \mbox{\hyperlink{player_info_8h_aea86e3a1a9c87a719ef5f7ee5f59265e}{load\+Player\+Info}} (char spielername\mbox{[}256\mbox{]}, int $\ast$played\+Games, int $\ast$games\+Won, int $\ast$games\+Lost, int $\ast$opened\+Cells)
+\item 
+int \mbox{\hyperlink{player_info_8h_a0ec4485ee4b552f8de8cf3b1dee12893}{save\+Player\+Info}} (char spielername\mbox{[}256\mbox{]}, int played\+Games, int games\+Won, int games\+Lost, int opened\+Cells)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the functions, which are used for loading and saving player infos. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{player_info_8h_a4c252d74b54f8800de4b747fc0a31d7a}\label{player_info_8h_a4c252d74b54f8800de4b747fc0a31d7a}} 
+\index{playerInfo.h@{playerInfo.h}!askPlayerInfo@{askPlayerInfo}}
+\index{askPlayerInfo@{askPlayerInfo}!playerInfo.h@{playerInfo.h}}
+\doxysubsubsection{\texorpdfstring{askPlayerInfo()}{askPlayerInfo()}}
+{\footnotesize\ttfamily int ask\+Player\+Info (\begin{DoxyParamCaption}\item[{char}]{eingabe\mbox{[}256\mbox{]} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em eingabe} & the player name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_info_8h_aea86e3a1a9c87a719ef5f7ee5f59265e}\label{player_info_8h_aea86e3a1a9c87a719ef5f7ee5f59265e}} 
+\index{playerInfo.h@{playerInfo.h}!loadPlayerInfo@{loadPlayerInfo}}
+\index{loadPlayerInfo@{loadPlayerInfo}!playerInfo.h@{playerInfo.h}}
+\doxysubsubsection{\texorpdfstring{loadPlayerInfo()}{loadPlayerInfo()}}
+{\footnotesize\ttfamily int load\+Player\+Info (\begin{DoxyParamCaption}\item[{char}]{spielername\mbox{[}256\mbox{]},  }\item[{int $\ast$}]{played\+Games,  }\item[{int $\ast$}]{games\+Won,  }\item[{int $\ast$}]{games\+Lost,  }\item[{int $\ast$}]{opened\+Cells }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em spielername} & the player name \\
+\hline
+{\em played\+Games} & the amount of games played \\
+\hline
+{\em games\+Won} & the amount of games won \\
+\hline
+{\em games\+Lost} & the amount of games lost \\
+\hline
+{\em opened\+Cells} & the amount of opened cells \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, 1 if Error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_info_8h_a0ec4485ee4b552f8de8cf3b1dee12893}\label{player_info_8h_a0ec4485ee4b552f8de8cf3b1dee12893}} 
+\index{playerInfo.h@{playerInfo.h}!savePlayerInfo@{savePlayerInfo}}
+\index{savePlayerInfo@{savePlayerInfo}!playerInfo.h@{playerInfo.h}}
+\doxysubsubsection{\texorpdfstring{savePlayerInfo()}{savePlayerInfo()}}
+{\footnotesize\ttfamily int save\+Player\+Info (\begin{DoxyParamCaption}\item[{char}]{spielername\mbox{[}256\mbox{]},  }\item[{int}]{played\+Games,  }\item[{int}]{games\+Won,  }\item[{int}]{games\+Lost,  }\item[{int}]{opened\+Cells }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em spielername} & the player name \\
+\hline
+{\em played\+Games} & the amount of games played \\
+\hline
+{\em games\+Won} & the amount of games won \\
+\hline
+{\em games\+Lost} & the amount of games lost \\
+\hline
+{\em opened\+Cells} & the amount of cells opened \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if usccessful, 1 if error 
+\end{DoxyReturn}
