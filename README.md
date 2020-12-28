@@ -1,6 +1,6 @@
 # Minesweeper
 ## *Documentation*
-Documentation can be found here [Doxygen](doxygen/html/index.html)
+Documentation can be found here [Doxygen](doxygen/)
 ## *Compilation*
 Compile using the command line: `gcc -Wall -Wextra -pedantic -Wno-unused-parameter -o minesweeper minesweeper.c checkingFunctions.c prints.c generatePlayfield.c revealFields.c playerInfo.c`  
 ## *Execution*
@@ -17,6 +17,7 @@ Examples: `A2, D10, ?B4, ?C15`
 ### *How to win*
 You can win by either opening all correct fields or by marking all mines correctly.  
 ## *Completed Tasks*
+Task description can be found here [Tasks](TASK.adoc)
 ### *Project Tasks*
 :white_check_mark: **Main Task (30 points)**  
 :white_check_mark: **Reveal neighbor zeroes Task (15 points)**  
