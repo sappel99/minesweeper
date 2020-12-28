@@ -24,8 +24,8 @@ Task description can be found here [Tasks](TASK.adoc)
 :white_check_mark: **Read Matrix and Mines from argv Task (15 points)**  
 :white_check_mark: **Mark a mine [?] Task (15 points)**  
 :white_check_mark: **Save/Load Player Statistics Task (15 points)**  
-:x: **Abort/Load the game Task (15 points)**  
+:wavy_dash: **Abort/Load the game Task (15 points)**  
 :x: **Use ncurses Task (25 points)**
 ### *Additional features*
-* help ..to be added  
-* exit .. to be added  
+* HELP, write `help` or `h` into the cmd to get a tip  
+* EXIT, write `exit` or `e` into the cmd to exit the game without saving statistics & game  
