@@ -22,7 +22,9 @@ int \mbox{\hyperlink{prints_8h_a8e1b3018d60540a60d80dc9dd35f1bc9}{print\+Public}
 int \mbox{\hyperlink{prints_8h_a0c0e42918a62eaa360ef2a550fab106e}{print\+Hidden}} (struct \mbox{\hyperlink{structmatrix}{matrix}} list)
 \begin{DoxyCompactList}\small\item\em Prints the hidden/secret matrix. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{prints_8h_aff976c4877918f9873903a137f262119}{print\+Mine\+Info}} (struct \mbox{\hyperlink{structmatrix}{matrix}} list, int mines)
-\begin{DoxyCompactList}\small\item\em Prints amount of mines and amount of mines marked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Prints amount of mines and amount of mines marked. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{prints_8h_a2d08c9e8bffe26d1120701e3952fa63e}{print\+Zero\+Info}} (struct \mbox{\hyperlink{structmatrix}{matrix}} list, int rows, int cols)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -51,7 +53,7 @@ Prints a red colored text to show an error.
 \end{DoxyReturn}
 
 
-Definition at line 36 of file prints.\+c.
+Definition at line 37 of file prints.\+c.
 
 \mbox{\Hypertarget{prints_8h_a0c0e42918a62eaa360ef2a550fab106e}\label{prints_8h_a0c0e42918a62eaa360ef2a550fab106e}} 
 \index{prints.h@{prints.h}!printHidden@{printHidden}}
@@ -73,7 +75,7 @@ Prints the hidden/secret matrix.
 \end{DoxyReturn}
 
 
-Definition at line 74 of file prints.\+c.
+Definition at line 75 of file prints.\+c.
 
 \mbox{\Hypertarget{prints_8h_a0934dc1a1f500bec39918061ab3650e7}\label{prints_8h_a0934dc1a1f500bec39918061ab3650e7}} 
 \index{prints.h@{prints.h}!printInfo@{printInfo}}
@@ -95,7 +97,7 @@ Prints a green colored text to show info.
 \end{DoxyReturn}
 
 
-Definition at line 45 of file prints.\+c.
+Definition at line 46 of file prints.\+c.
 
 \mbox{\Hypertarget{prints_8h_aff976c4877918f9873903a137f262119}\label{prints_8h_aff976c4877918f9873903a137f262119}} 
 \index{prints.h@{prints.h}!printMineInfo@{printMineInfo}}
@@ -119,7 +121,7 @@ Prints amount of mines and amount of mines marked.
 \end{DoxyReturn}
 
 
-Definition at line 94 of file prints.\+c.
+Definition at line 95 of file prints.\+c.
 
 \mbox{\Hypertarget{prints_8h_a8e1b3018d60540a60d80dc9dd35f1bc9}\label{prints_8h_a8e1b3018d60540a60d80dc9dd35f1bc9}} 
 \index{prints.h@{prints.h}!printPublic@{printPublic}}
@@ -141,7 +143,7 @@ Prints the public matrix.
 \end{DoxyReturn}
 
 
-Definition at line 54 of file prints.\+c.
+Definition at line 55 of file prints.\+c.
 
 \mbox{\Hypertarget{prints_8h_ac301060d4c3ff211e5a5a451696c16d2}\label{prints_8h_ac301060d4c3ff211e5a5a451696c16d2}} 
 \index{prints.h@{prints.h}!printStructure@{printStructure}}
@@ -163,7 +165,7 @@ This function prints the design idea behind the matrix.
 \end{DoxyReturn}
 
 
-Definition at line 14 of file prints.\+c.
+Definition at line 15 of file prints.\+c.
 
 \mbox{\Hypertarget{prints_8h_a9da04970f8029c42e00913db85bed270}\label{prints_8h_a9da04970f8029c42e00913db85bed270}} 
 \index{prints.h@{prints.h}!printWarn@{printWarn}}
@@ -185,5 +187,27 @@ Prints a yellow colored text to warn.
 \end{DoxyReturn}
 
 
-Definition at line 27 of file prints.\+c.
+Definition at line 28 of file prints.\+c.
+
+\mbox{\Hypertarget{prints_8h_a2d08c9e8bffe26d1120701e3952fa63e}\label{prints_8h_a2d08c9e8bffe26d1120701e3952fa63e}} 
+\index{prints.h@{prints.h}!printZeroInfo@{printZeroInfo}}
+\index{printZeroInfo@{printZeroInfo}!prints.h@{prints.h}}
+\doxysubsubsection{\texorpdfstring{printZeroInfo()}{printZeroInfo()}}
+{\footnotesize\ttfamily int print\+Zero\+Info (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmatrix}{matrix}}}]{list,  }\item[{int}]{rows,  }\item[{int}]{cols }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & the game matrix \\
+\hline
+{\em rows} & the amount of rows \\
+\hline
+{\em cols} & the amount of columns \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful 
+\end{DoxyReturn}
+
+
+Definition at line 115 of file prints.\+c.
 

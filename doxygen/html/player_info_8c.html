@@ -87,11 +87,17 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a4c252d74b54f8800de4b747fc0a31d7a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_info_8c.html#a4c252d74b54f8800de4b747fc0a31d7a">askPlayerInfo</a> (char eingabe[256])</td></tr>
+<tr class="memdesc:a4c252d74b54f8800de4b747fc0a31d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function asks for the player name.  <a href="player_info_8c.html#a4c252d74b54f8800de4b747fc0a31d7a">More...</a><br /></td></tr>
 <tr class="separator:a4c252d74b54f8800de4b747fc0a31d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea86e3a1a9c87a719ef5f7ee5f59265e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_info_8c.html#aea86e3a1a9c87a719ef5f7ee5f59265e">loadPlayerInfo</a> (char spielername[256], int *playedGames, int *gamesWon, int *gamesLost, int *openedCells)</td></tr>
+<tr class="memdesc:aea86e3a1a9c87a719ef5f7ee5f59265e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions loads the statistics from a local file.  <a href="player_info_8c.html#aea86e3a1a9c87a719ef5f7ee5f59265e">More...</a><br /></td></tr>
 <tr class="separator:aea86e3a1a9c87a719ef5f7ee5f59265e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ec4485ee4b552f8de8cf3b1dee12893"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_info_8c.html#a0ec4485ee4b552f8de8cf3b1dee12893">savePlayerInfo</a> (char spielername[256], int playedGames, int gamesWon, int gamesLost, int openedCells)</td></tr>
+<tr class="memdesc:a0ec4485ee4b552f8de8cf3b1dee12893"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function saves the statistics into a local file.  <a href="player_info_8c.html#a0ec4485ee4b552f8de8cf3b1dee12893">More...</a><br /></td></tr>
 <tr class="separator:a0ec4485ee4b552f8de8cf3b1dee12893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef86fd3cd76a83217fd07dfc5860a562"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_info_8c.html#aef86fd3cd76a83217fd07dfc5860a562">saveGame</a> (char spielername[256], struct <a class="el" href="structmatrix.html">matrix</a> list)</td></tr>
+<tr class="memdesc:aef86fd3cd76a83217fd07dfc5860a562"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function saves the game matrix into a local file.  <a href="player_info_8c.html#aef86fd3cd76a83217fd07dfc5860a562">More...</a><br /></td></tr>
+<tr class="separator:aef86fd3cd76a83217fd07dfc5860a562"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>These functions are used for loading and saving player infos. </p>
@@ -113,6 +119,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This function asks for the player name. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">eingabe</td><td>the player name </td></tr>
@@ -168,6 +176,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This functions loads the statistics from a local file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">spielername</td><td>the player name </td></tr>
@@ -181,6 +191,46 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>0 if successful, 1 if Error </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="player_info_8c_source.html#l00032">32</a> of file <a class="el" href="player_info_8c_source.html">playerInfo.c</a>.</p>
+
+</div>
+</div>
+<a id="aef86fd3cd76a83217fd07dfc5860a562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef86fd3cd76a83217fd07dfc5860a562">&#9670;&nbsp;</a></span>saveGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int saveGame </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>spielername</em>[256], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structmatrix.html">matrix</a>&#160;</td>
+          <td class="paramname"><em>list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function saves the game matrix into a local file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spielername</td><td>the player name </td></tr>
+    <tr><td class="paramname">list</td><td>the game matrix </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if successful, 1 if error </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="player_info_8c_source.html#l00136">136</a> of file <a class="el" href="player_info_8c_source.html">playerInfo.c</a>.</p>
 
 </div>
 </div>
@@ -227,6 +277,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This function saves the statistics into a local file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">spielername</td><td>the player name </td></tr>
@@ -237,7 +289,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if usccessful, 1 if error </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if successful, 1 if error </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="player_info_8c_source.html#l00112">112</a> of file <a class="el" href="player_info_8c_source.html">playerInfo.c</a>.</p>
 

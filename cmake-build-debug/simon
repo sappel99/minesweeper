@@ -1,5 +1,5 @@
 simon
-playedGames: 3
+playedGames: 4
 gamesWon: 1
-gamesLost: 2
-openedCells: 46
+gamesLost: 3
+openedCells: 51

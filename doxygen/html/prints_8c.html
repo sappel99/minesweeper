@@ -77,6 +77,7 @@ $(function() {
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;memory.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="prints_8h_source.html">prints.h</a>&quot;</code><br />
 </div>
 <p><a href="prints_8c_source.html">Go to the source code of this file.</a></p>
@@ -104,6 +105,8 @@ Functions</h2></td></tr>
 <tr class="memitem:aff976c4877918f9873903a137f262119"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prints_8c.html#aff976c4877918f9873903a137f262119">printMineInfo</a> (struct <a class="el" href="structmatrix.html">matrix</a> list, int mines)</td></tr>
 <tr class="memdesc:aff976c4877918f9873903a137f262119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints amount of mines and amount of mines marked.  <a href="prints_8c.html#aff976c4877918f9873903a137f262119">More...</a><br /></td></tr>
 <tr class="separator:aff976c4877918f9873903a137f262119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d08c9e8bffe26d1120701e3952fa63e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prints_8c.html#a2d08c9e8bffe26d1120701e3952fa63e">printZeroInfo</a> (struct <a class="el" href="structmatrix.html">matrix</a> list, int rows, int cols)</td></tr>
+<tr class="separator:a2d08c9e8bffe26d1120701e3952fa63e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>These functions are used for printing matrixes, warnings, errors or informations. </p>
@@ -135,7 +138,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if successful </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="prints_8c_source.html#l00036">36</a> of file <a class="el" href="prints_8c_source.html">prints.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="prints_8c_source.html#l00037">37</a> of file <a class="el" href="prints_8c_source.html">prints.c</a>.</p>
 
 </div>
 </div>
@@ -164,7 +167,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if successful </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="prints_8c_source.html#l00074">74</a> of file <a class="el" href="prints_8c_source.html">prints.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="prints_8c_source.html#l00075">75</a> of file <a class="el" href="prints_8c_source.html">prints.c</a>.</p>
 
 </div>
 </div>
@@ -193,7 +196,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if successful </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="prints_8c_source.html#l00045">45</a> of file <a class="el" href="prints_8c_source.html">prints.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="prints_8c_source.html#l00046">46</a> of file <a class="el" href="prints_8c_source.html">prints.c</a>.</p>
 
 </div>
 </div>
@@ -233,7 +236,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if successful </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="prints_8c_source.html#l00094">94</a> of file <a class="el" href="prints_8c_source.html">prints.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="prints_8c_source.html#l00095">95</a> of file <a class="el" href="prints_8c_source.html">prints.c</a>.</p>
 
 </div>
 </div>
@@ -262,7 +265,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if successful </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="prints_8c_source.html#l00054">54</a> of file <a class="el" href="prints_8c_source.html">prints.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="prints_8c_source.html#l00055">55</a> of file <a class="el" href="prints_8c_source.html">prints.c</a>.</p>
 
 </div>
 </div>
@@ -291,7 +294,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if successful </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="prints_8c_source.html#l00014">14</a> of file <a class="el" href="prints_8c_source.html">prints.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="prints_8c_source.html#l00015">15</a> of file <a class="el" href="prints_8c_source.html">prints.c</a>.</p>
 
 </div>
 </div>
@@ -320,7 +323,52 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if successful </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="prints_8c_source.html#l00027">27</a> of file <a class="el" href="prints_8c_source.html">prints.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="prints_8c_source.html#l00028">28</a> of file <a class="el" href="prints_8c_source.html">prints.c</a>.</p>
+
+</div>
+</div>
+<a id="a2d08c9e8bffe26d1120701e3952fa63e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d08c9e8bffe26d1120701e3952fa63e">&#9670;&nbsp;</a></span>printZeroInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int printZeroInfo </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structmatrix.html">matrix</a>&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cols</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>the game matrix </td></tr>
+    <tr><td class="paramname">rows</td><td>the amount of rows </td></tr>
+    <tr><td class="paramname">cols</td><td>the amount of columns </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if successful </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="prints_8c_source.html#l00115">115</a> of file <a class="el" href="prints_8c_source.html">prints.c</a>.</p>
 
 </div>
 </div>

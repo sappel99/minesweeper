@@ -75,18 +75,44 @@ int main(int argc, char* argv[]) {
     //printStructure(list);
     printPublic(list);
     //printHidden(list);
-    while (1) {
-        if (readAndReveal(list, rows) == 1) {
-            printf("\033[0;31mGame lost - Mine found\033[0m\n");
-            openedCells++;playedGames++;gamesLost++;savePlayerInfo(spielername,playedGames,gamesWon,gamesLost,openedCells);
-            printPublic(list);
-            printf("\n");
-            printHidden(list);
-            break;
-        } else {
-            openedCells++;
-            printPublic(list);
-            printMineInfo(list, mines);
+
+    int playGame = 1;
+    while (playGame) {
+        switch (readAndReveal(list, rows)) {
+            case 1: {
+                printf("\033[0;31mGame lost - Mine found\033[0m\n");
+                openedCells++;playedGames++;gamesLost++;savePlayerInfo(spielername,playedGames,gamesWon,gamesLost,openedCells);
+                printPublic(list);
+                printf("\n");
+                printHidden(list);
+                playGame = 0; //break;
+            }
+            case 2: {
+                //exit
+                printInfo("Game exit initiated..\n");
+                printInfo("Playing data discarded\n");
+                playGame = 0;
+                break;
+            }
+            case 3: {
+                //save
+                printInfo("Game exit initiated..\n");
+                printInfo("Playing data saved\n");
+                savePlayerInfo(spielername,playedGames,gamesWon,gamesLost,openedCells);
+                saveGame(spielername,list);
+                playGame = 0;
+                break;
+            }
+            case 4: {
+                //help
+                printZeroInfo(list,rows,cols);
+                break;
+            }
+            default: {
+                openedCells++;
+                printPublic(list);
+                printMineInfo(list, mines);
+            }
         }
         if (checkAllMinesMarked(list, mines) == 1) {
             printInfo("Game won - All mines marked\n");
@@ -107,10 +133,10 @@ int main(int argc, char* argv[]) {
     }
 
     printf("Game finished\n");
-    printf("2nd print\n");
+    //printf("2nd print\n");
     free_list(&list);
-    printf("3rd print\n");
-    printf("4th\n");
+    //printf("3rd print\n");
+    //printf("4th\n");
 
     //printf("Unreachable\n");
 

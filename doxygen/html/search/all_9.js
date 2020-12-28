@@ -12,5 +12,6 @@ var searchData=
   ['prints_2eh_37',['prints.h',['../prints_8h.html',1,'']]],
   ['printstructure_38',['printStructure',['../prints_8c.html#ac301060d4c3ff211e5a5a451696c16d2',1,'printStructure(struct matrix list):&#160;prints.c'],['../prints_8h.html#ac301060d4c3ff211e5a5a451696c16d2',1,'printStructure(struct matrix list):&#160;prints.c']]],
   ['printwarn_39',['printWarn',['../prints_8c.html#a9da04970f8029c42e00913db85bed270',1,'printWarn(char *text):&#160;prints.c'],['../prints_8h.html#a9da04970f8029c42e00913db85bed270',1,'printWarn(char *text):&#160;prints.c']]],
-  ['publicsymbol_40',['publicSymbol',['../structmatrix.html#a610c3c2f7efeef2aabfd90615f9a96d9',1,'matrix']]]
+  ['printzeroinfo_40',['printZeroInfo',['../prints_8c.html#a2d08c9e8bffe26d1120701e3952fa63e',1,'printZeroInfo(struct matrix list, int rows, int cols):&#160;prints.c'],['../prints_8h.html#a2d08c9e8bffe26d1120701e3952fa63e',1,'printZeroInfo(struct matrix list, int rows, int cols):&#160;prints.c']]],
+  ['publicsymbol_41',['publicSymbol',['../structmatrix.html#a610c3c2f7efeef2aabfd90615f9a96d9',1,'matrix']]]
 ];

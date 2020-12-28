@@ -129,6 +129,15 @@ int readAndReveal(struct matrix list,int rows){
                 }
             }
         }
+        if (strncmp(eingabe, "exit", 4) == 0||strncmp(eingabe, "e", 1) == 0) {
+            return 2;
+        }
+        if (strncmp(eingabe, "save", 4) == 0||strncmp(eingabe, "s", 1) == 0) {
+            return 3;
+        }
+        if (strncmp(eingabe, "help", 4) == 0||strncmp(eingabe, "h\0", 2) == 0) {
+            return 4;
+        }
     }
 
     struct matrix *it = &list;

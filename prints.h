@@ -15,5 +15,6 @@ int printInfo(char *text);
 int printPublic(struct matrix list);
 int printHidden(struct matrix list);
 int printMineInfo(struct matrix list,int mines);
+int printZeroInfo(struct matrix list, int rows, int cols);
 
 #endif //INC_130_MINESWEEPER_PRINTS_H

@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <memory.h>
+#include <stdlib.h>
 #include "prints.h"
 /**
  * \brief This function prints the design idea behind the matrix
@@ -102,5 +103,30 @@ int printMineInfo(struct matrix list,int mines){
     }
 
     printf("\033[0;32mAll Mines: %d, Mines Marked: %d\033[0m\n",mines,minesMarked);
+    return 0;
+}
+/**
+ *
+ * @param list the game matrix
+ * @param rows the amount of rows
+ * @param cols the amount of columns
+ * @return 0 if successful
+ */
+int printZeroInfo(struct matrix list, int rows, int cols){
+    int gesetzt = 0;
+    while(gesetzt == 0) {
+        struct matrix *it = &list;
+        int random = rand() % (rows * cols);
+        //printf("%d\n", random);
+        while (it != NULL) {
+            if (it->index == random) {
+                if (strcmp(it->hiddenSymbol, "0") == 0){
+                    printf("There is a Zero at X:%d, Y:%d\n",it->x,it->y);
+                    gesetzt++;
+                }
+            }
+            it = it->next;
+        }
+    }
     return 0;
 }

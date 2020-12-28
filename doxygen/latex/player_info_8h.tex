@@ -5,15 +5,18 @@
 Header file for the functions, which are used for loading and saving player infos.  
 
 
+{\ttfamily \#include \char`\"{}minesweeper.\+h\char`\"{}}\newline
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{player_info_8h_a4c252d74b54f8800de4b747fc0a31d7a}{ask\+Player\+Info}} (char eingabe\mbox{[}256\mbox{]})
-\item 
+\begin{DoxyCompactList}\small\item\em This function asks for the player name. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{player_info_8h_aea86e3a1a9c87a719ef5f7ee5f59265e}{load\+Player\+Info}} (char spielername\mbox{[}256\mbox{]}, int $\ast$played\+Games, int $\ast$games\+Won, int $\ast$games\+Lost, int $\ast$opened\+Cells)
-\item 
+\begin{DoxyCompactList}\small\item\em This functions loads the statistics from a local file. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{player_info_8h_a0ec4485ee4b552f8de8cf3b1dee12893}{save\+Player\+Info}} (char spielername\mbox{[}256\mbox{]}, int played\+Games, int games\+Won, int games\+Lost, int opened\+Cells)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This function saves the statistics into a local file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{player_info_8h_aef86fd3cd76a83217fd07dfc5860a562}{save\+Game}} (char spielername\mbox{[}256\mbox{]}, struct \mbox{\hyperlink{structmatrix}{matrix}} list)
+\begin{DoxyCompactList}\small\item\em This function saves the game matrix into a local file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -27,6 +30,10 @@ Header file for the functions, which are used for loading and saving player info
 \index{askPlayerInfo@{askPlayerInfo}!playerInfo.h@{playerInfo.h}}
 \doxysubsubsection{\texorpdfstring{askPlayerInfo()}{askPlayerInfo()}}
 {\footnotesize\ttfamily int ask\+Player\+Info (\begin{DoxyParamCaption}\item[{char}]{eingabe\mbox{[}256\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function asks for the player name. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -45,6 +52,10 @@ Definition at line 18 of file player\+Info.\+c.
 \index{loadPlayerInfo@{loadPlayerInfo}!playerInfo.h@{playerInfo.h}}
 \doxysubsubsection{\texorpdfstring{loadPlayerInfo()}{loadPlayerInfo()}}
 {\footnotesize\ttfamily int load\+Player\+Info (\begin{DoxyParamCaption}\item[{char}]{spielername\mbox{[}256\mbox{]},  }\item[{int $\ast$}]{played\+Games,  }\item[{int $\ast$}]{games\+Won,  }\item[{int $\ast$}]{games\+Lost,  }\item[{int $\ast$}]{opened\+Cells }\end{DoxyParamCaption})}
+
+
+
+This functions loads the statistics from a local file. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -66,11 +77,39 @@ Definition at line 18 of file player\+Info.\+c.
 
 Definition at line 32 of file player\+Info.\+c.
 
+\mbox{\Hypertarget{player_info_8h_aef86fd3cd76a83217fd07dfc5860a562}\label{player_info_8h_aef86fd3cd76a83217fd07dfc5860a562}} 
+\index{playerInfo.h@{playerInfo.h}!saveGame@{saveGame}}
+\index{saveGame@{saveGame}!playerInfo.h@{playerInfo.h}}
+\doxysubsubsection{\texorpdfstring{saveGame()}{saveGame()}}
+{\footnotesize\ttfamily int save\+Game (\begin{DoxyParamCaption}\item[{char}]{spielername\mbox{[}256\mbox{]},  }\item[{struct \mbox{\hyperlink{structmatrix}{matrix}}}]{list }\end{DoxyParamCaption})}
+
+
+
+This function saves the game matrix into a local file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spielername} & the player name \\
+\hline
+{\em list} & the game matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, 1 if error 
+\end{DoxyReturn}
+
+
+Definition at line 136 of file player\+Info.\+c.
+
 \mbox{\Hypertarget{player_info_8h_a0ec4485ee4b552f8de8cf3b1dee12893}\label{player_info_8h_a0ec4485ee4b552f8de8cf3b1dee12893}} 
 \index{playerInfo.h@{playerInfo.h}!savePlayerInfo@{savePlayerInfo}}
 \index{savePlayerInfo@{savePlayerInfo}!playerInfo.h@{playerInfo.h}}
 \doxysubsubsection{\texorpdfstring{savePlayerInfo()}{savePlayerInfo()}}
 {\footnotesize\ttfamily int save\+Player\+Info (\begin{DoxyParamCaption}\item[{char}]{spielername\mbox{[}256\mbox{]},  }\item[{int}]{played\+Games,  }\item[{int}]{games\+Won,  }\item[{int}]{games\+Lost,  }\item[{int}]{opened\+Cells }\end{DoxyParamCaption})}
+
+
+
+This function saves the statistics into a local file. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -86,7 +125,7 @@ Definition at line 32 of file player\+Info.\+c.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-0 if usccessful, 1 if error 
+0 if successful, 1 if error 
 \end{DoxyReturn}
 
 
