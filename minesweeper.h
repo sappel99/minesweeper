@@ -4,6 +4,9 @@
 
 #ifndef INC_130_MINESWEEPER_MINESWEEPER_H
 #define INC_130_MINESWEEPER_MINESWEEPER_H
+
+#define NULL ( (void *) 0)
+
 /** \struct
  * \brief This is the matrix for every element on the playing field.
  *

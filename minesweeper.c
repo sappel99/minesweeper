@@ -8,7 +8,6 @@
  */
 #include <stdlib.h>
 #include <stdio.h>
-#include <memory.h>
 #include <time.h>
 #include "minesweeper.h"
 #include "prints.h"
@@ -85,7 +84,8 @@ int main(int argc, char* argv[]) {
                 printPublic(list);
                 printf("\n");
                 printHidden(list);
-                playGame = 0; //break;
+                playGame = 0;
+                break;
             }
             case 2: {
                 //exit
