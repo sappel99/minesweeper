@@ -13,6 +13,8 @@ These functions are used for generating the playing field, before the game begin
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+int \mbox{\hyperlink{generate_playfield_8c_ae3e6da6cf2fd760f11104997d2ee61a7}{insertlist}} (int x, int y, int index, const char public\+Symbol\mbox{[}2\mbox{]}, const char hidden\+Symbol\mbox{[}2\mbox{]}, struct \mbox{\hyperlink{structmatrix}{matrix}} $\ast$start)
+\begin{DoxyCompactList}\small\item\em This funtion adds a new element to the matrix list. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{generate_playfield_8c_a73442ebb9e97541f7c834e8c302fb98c}{generate\+Matrix}} (int x, int y, int index, char alph, struct \mbox{\hyperlink{structmatrix}{matrix}} $\ast$list, int rows, int cols)
 \begin{DoxyCompactList}\small\item\em This function calculates the correct coordinates and symbols for each element. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{generate_playfield_8c_acef14dcecd93220ef270bb78be3ba5d2}{set\+Mines}} (struct \mbox{\hyperlink{structmatrix}{matrix}} list, int mines, int rows, int cols, int mines\+Index\mbox{[}mines\mbox{]})
@@ -53,6 +55,10 @@ This function calculates the hidden value for each field surrounding a mine.
 \begin{DoxyReturn}{Returns}
 0 when successful 
 \end{DoxyReturn}
+
+
+Definition at line 125 of file generate\+Playfield.\+c.
+
 \mbox{\Hypertarget{generate_playfield_8c_a73442ebb9e97541f7c834e8c302fb98c}\label{generate_playfield_8c_a73442ebb9e97541f7c834e8c302fb98c}} 
 \index{generatePlayfield.c@{generatePlayfield.c}!generateMatrix@{generateMatrix}}
 \index{generateMatrix@{generateMatrix}!generatePlayfield.c@{generatePlayfield.c}}
@@ -85,6 +91,42 @@ Every element in the first row gets an alphabetical character. Every element in 
 \begin{DoxyReturn}{Returns}
 0 when successful, 1 when unsuccessful 
 \end{DoxyReturn}
+
+
+Definition at line 62 of file generate\+Playfield.\+c.
+
+\mbox{\Hypertarget{generate_playfield_8c_ae3e6da6cf2fd760f11104997d2ee61a7}\label{generate_playfield_8c_ae3e6da6cf2fd760f11104997d2ee61a7}} 
+\index{generatePlayfield.c@{generatePlayfield.c}!insertlist@{insertlist}}
+\index{insertlist@{insertlist}!generatePlayfield.c@{generatePlayfield.c}}
+\doxysubsubsection{\texorpdfstring{insertlist()}{insertlist()}}
+{\footnotesize\ttfamily int insertlist (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{index,  }\item[{const char}]{public\+Symbol\mbox{[}2\mbox{]},  }\item[{const char}]{hidden\+Symbol\mbox{[}2\mbox{]},  }\item[{struct \mbox{\hyperlink{structmatrix}{matrix}} $\ast$}]{start }\end{DoxyParamCaption})}
+
+
+
+This funtion adds a new element to the matrix list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the x coordinate \\
+\hline
+{\em y} & the y coordinate \\
+\hline
+{\em index} & the index of the element in the list \\
+\hline
+{\em public\+Symbol} & the visible symbol to the player\+: Nothing or numbers \\
+\hline
+{\em hidden\+Symbol} & the hidden symbol to the player\+: Mines,.. \\
+\hline
+{\em start} & the existing matrix list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 when successful, -\/1 when out of memory 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file generate\+Playfield.\+c.
+
 \mbox{\Hypertarget{generate_playfield_8c_a4e462fd7a747d945ebb35273e6fb103e}\label{generate_playfield_8c_a4e462fd7a747d945ebb35273e6fb103e}} 
 \index{generatePlayfield.c@{generatePlayfield.c}!revealFirst@{revealFirst}}
 \index{revealFirst@{revealFirst}!generatePlayfield.c@{generatePlayfield.c}}
@@ -107,6 +149,10 @@ This function randomly reveals the first number to begin with.
 \begin{DoxyReturn}{Returns}
 0 when successful 
 \end{DoxyReturn}
+
+
+Definition at line 167 of file generate\+Playfield.\+c.
+
 \mbox{\Hypertarget{generate_playfield_8c_acef14dcecd93220ef270bb78be3ba5d2}\label{generate_playfield_8c_acef14dcecd93220ef270bb78be3ba5d2}} 
 \index{generatePlayfield.c@{generatePlayfield.c}!setMines@{setMines}}
 \index{setMines@{setMines}!generatePlayfield.c@{generatePlayfield.c}}
@@ -133,3 +179,7 @@ This function sets the mines randomly in the playing field.
 \begin{DoxyReturn}{Returns}
 0 when successful 
 \end{DoxyReturn}
+
+
+Definition at line 98 of file generate\+Playfield.\+c.
+

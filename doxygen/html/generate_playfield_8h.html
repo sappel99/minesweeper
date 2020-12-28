@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Minesweeper
-   &#160;<span id="projectnumber">1</span>
+   &#160;<span id="projectnumber">V1</span>
    </div>
   </td>
  </tr>
@@ -81,6 +81,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ae3e6da6cf2fd760f11104997d2ee61a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="generate_playfield_8h.html#ae3e6da6cf2fd760f11104997d2ee61a7">insertlist</a> (int x, int y, int index, const char publicSymbol[2], const char hiddenSymbol[2], struct <a class="el" href="structmatrix.html">matrix</a> *start)</td></tr>
+<tr class="memdesc:ae3e6da6cf2fd760f11104997d2ee61a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This funtion adds a new element to the matrix list.  <a href="generate_playfield_8h.html#ae3e6da6cf2fd760f11104997d2ee61a7">More...</a><br /></td></tr>
+<tr class="separator:ae3e6da6cf2fd760f11104997d2ee61a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adafb083cfed9f1d9ea74a0445fa618eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="generate_playfield_8h.html#adafb083cfed9f1d9ea74a0445fa618eb">generateMatrix</a> (int x, int y, int count, char alph, struct <a class="el" href="structmatrix.html">matrix</a> *list, int rows, int cols)</td></tr>
 <tr class="memdesc:adafb083cfed9f1d9ea74a0445fa618eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function calculates the correct coordinates and symbols for each element.  <a href="generate_playfield_8h.html#adafb083cfed9f1d9ea74a0445fa618eb">More...</a><br /></td></tr>
 <tr class="separator:adafb083cfed9f1d9ea74a0445fa618eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -96,6 +99,8 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for the functions, which are used for generating the playing field, before the game begins. </p>
+
+<p class="definition">Definition in file <a class="el" href="generate_playfield_8h_source.html">generatePlayfield.h</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a8f815b4398b28d63d807edd910bc661a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8f815b4398b28d63d807edd910bc661a">&#9670;&nbsp;</a></span>calculateMineValues()</h2>
@@ -146,6 +151,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 when successful </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="generate_playfield_8c_source.html#l00125">125</a> of file <a class="el" href="generate_playfield_8c_source.html">generatePlayfield.c</a>.</p>
 
 </div>
 </div>
@@ -221,6 +228,76 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 when successful, 1 when unsuccessful </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="generate_playfield_8c_source.html#l00062">62</a> of file <a class="el" href="generate_playfield_8c_source.html">generatePlayfield.c</a>.</p>
+
+</div>
+</div>
+<a id="ae3e6da6cf2fd760f11104997d2ee61a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3e6da6cf2fd760f11104997d2ee61a7">&#9670;&nbsp;</a></span>insertlist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int insertlist </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>publicSymbol</em>[2], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>hiddenSymbol</em>[2], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structmatrix.html">matrix</a> *&#160;</td>
+          <td class="paramname"><em>start</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This funtion adds a new element to the matrix list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>the x coordinate </td></tr>
+    <tr><td class="paramname">y</td><td>the y coordinate </td></tr>
+    <tr><td class="paramname">index</td><td>the index of the element in the list </td></tr>
+    <tr><td class="paramname">publicSymbol</td><td>the visible symbol to the player: Nothing or numbers </td></tr>
+    <tr><td class="paramname">hiddenSymbol</td><td>the hidden symbol to the player: Mines,.. </td></tr>
+    <tr><td class="paramname">start</td><td>the existing matrix list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 when successful, -1 when out of memory </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="generate_playfield_8c_source.html#l00022">22</a> of file <a class="el" href="generate_playfield_8c_source.html">generatePlayfield.c</a>.</p>
+
 </div>
 </div>
 <a id="a4e462fd7a747d945ebb35273e6fb103e"></a>
@@ -265,6 +342,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 when successful </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="generate_playfield_8c_source.html#l00167">167</a> of file <a class="el" href="generate_playfield_8c_source.html">generatePlayfield.c</a>.</p>
 
 </div>
 </div>
@@ -324,6 +403,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 when successful </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="generate_playfield_8c_source.html#l00098">98</a> of file <a class="el" href="generate_playfield_8c_source.html">generatePlayfield.c</a>.</p>
 
 </div>
 </div>

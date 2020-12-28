@@ -1,0 +1,31 @@
+\hypertarget{md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e_autotoc_md1}{}\doxysection{$<$em$>$\+Documentation$<$/em$>$}\label{md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e_autotoc_md1}
+Documentation can be found here \href{doxygen/html/index.html}{\texttt{ Doxygen}} \hypertarget{md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e_autotoc_md2}{}\doxysection{$<$em$>$\+Compilation$<$/em$>$}\label{md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e_autotoc_md2}
+Compile using the command line\+: {\ttfamily gcc -\/Wall -\/Wextra -\/pedantic -\/Wno-\/unused-\/parameter -\/o minesweeper \mbox{\hyperlink{minesweeper_8c}{minesweeper.\+c}} \mbox{\hyperlink{checking_functions_8c}{checking\+Functions.\+c}} \mbox{\hyperlink{prints_8c}{prints.\+c}} \mbox{\hyperlink{generate_playfield_8c}{generate\+Playfield.\+c}} \mbox{\hyperlink{reveal_fields_8c}{reveal\+Fields.\+c}} \mbox{\hyperlink{player_info_8c}{player\+Info.\+c}}} ~\newline
+ \hypertarget{md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e_autotoc_md3}{}\doxysection{$<$em$>$\+Execution$<$/em$>$}\label{md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e_autotoc_md3}
+\hypertarget{md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{$<$em$>$\+Calling$<$/em$>$}\label{md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e_autotoc_md4}
+Run the program by calling {\ttfamily ./minesweeper 10x10 20} ~\newline
+ The first argument must be a 3 or 5 character matrix, e.\+g. {\ttfamily 5x5} or {\ttfamily 15x15}. ~\newline
+ The second argument must be a one or two digit number of mines for the game, e.\+g. {\ttfamily 5} or {\ttfamily 15}. ~\newline
+ \hypertarget{md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{$<$em$>$\+Runtime$<$/em$>$}\label{md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e_autotoc_md5}
+First, the user has to enter a name. If the player is known, statistics will be loaded. ~\newline
+ Afterwards, the matrix will be generated and the user can start to play. ~\newline
+ The user can choose fields in the matrix by writing the column name and the row number. He can also add a question mark in front of it, to mark that field as a mine. ~\newline
+ Examples\+: {\ttfamily A2, D10, ?B4, ?C15} ~\newline
+ \hypertarget{md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{$<$em$>$\+How to win$<$/em$>$}\label{md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e_autotoc_md6}
+You can win by either opening all correct fields or by marking all mines correctly. ~\newline
+ \hypertarget{md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e_autotoc_md7}{}\doxysection{$<$em$>$\+Completed Tasks$<$/em$>$}\label{md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e_autotoc_md7}
+\hypertarget{md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e_autotoc_md8}{}\doxysubsection{$<$em$>$\+Project Tasks$<$/em$>$}\label{md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e_autotoc_md8}
+\+:white\+\_\+check\+\_\+mark\+: {\bfseries{Main Task (30 points)}} ~\newline
+ \+:white\+\_\+check\+\_\+mark\+: {\bfseries{Reveal neighbor zeroes Task (15 points)}} ~\newline
+ \+:white\+\_\+check\+\_\+mark\+: {\bfseries{Read Matrix and Mines from argv Task (15 points)}} ~\newline
+ \+:white\+\_\+check\+\_\+mark\+: {\bfseries{Mark a mine \mbox{[}?\mbox{]} Task (15 points)}} ~\newline
+ \+:white\+\_\+check\+\_\+mark\+: {\bfseries{Save/\+Load Player Statistics Task (15 points)}} ~\newline
+ \+:x\+: {\bfseries{Abort/\+Load the game Task (15 points)}} ~\newline
+ \+:x\+: {\bfseries{Use ncurses Task (25 points)}} \hypertarget{md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{$<$em$>$\+Additional features$<$/em$>$}\label{md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e_autotoc_md9}
+
+\begin{DoxyItemize}
+\item help ..to be added ~\newline
+
+\item exit .. to be added ~\newline
+ 
+\end{DoxyItemize}

@@ -10,17 +10,19 @@ Header file for the functions, which are used for either checking events or chec
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{checking_functions_8h_a412a1045ea1433ad50c9f0865a644c08}{part\+Of\+Alphabet}} (char letter)
-\begin{DoxyCompactList}\small\item\em This function checks if the given letter is part of the uppercase alphabet. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em O\+LD -\/ This function is similar to \mbox{\hyperlink{checking_functions_8c_a97f3fe444eb62bcbd36939a2c8a7e22f}{is\+Alpha\+Switch()}};. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{checking_functions_8h_a815dfc28204b922344916fe04bc9682d}{is\+Digit}} (char number\+In)
-\begin{DoxyCompactList}\small\item\em This function checks if the given chracter is a number. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em O\+LD -\/ This function is similar to \mbox{\hyperlink{checking_functions_8c_a97c5442561c1a0beb953467bc01438a4}{is\+Digit\+Switch()}};. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{checking_functions_8h_a2ac18aa50d957f55b5cbae936dcec0e9}{check\+All\+Mines\+Marked}} (struct \mbox{\hyperlink{structmatrix}{matrix}} list, int mines)
 \begin{DoxyCompactList}\small\item\em This function checks if all mines are marked. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{checking_functions_8h_a7d96bf3762dc88a649026c9412b8859f}{check\+All\+Fields\+Opened}} (struct \mbox{\hyperlink{structmatrix}{matrix}} list, int rows, int cols, int mines)
 \begin{DoxyCompactList}\small\item\em This function checks if all number fields are opened. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{checking_functions_8h_a97c5442561c1a0beb953467bc01438a4}{is\+Digit\+Switch}} (char digit)
-\begin{DoxyCompactList}\small\item\em This function is similar to \mbox{\hyperlink{checking_functions_8c_a815dfc28204b922344916fe04bc9682d}{is\+Digit()}};. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This function checks if the given character is a number. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{checking_functions_8h_a033e0bef0eb73824715c58ebea61087b}{check\+Main\+Parameters}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, int $\ast$x, int $\ast$y, int $\ast$mines)
-\begin{DoxyCompactList}\small\item\em This functions checks the arguments given, when main function was called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This functions checks the arguments given, when main function was called. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{checking_functions_8h_a60c62964182224f537d88755337ebf19}{is\+Alpha\+Switch}} (char digit)
+\begin{DoxyCompactList}\small\item\em This function checks if the given letter is part of the uppercase alphabet. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -53,6 +55,10 @@ This function checks if all number fields are opened.
 \begin{DoxyReturn}{Returns}
 1 if all fields are opened, 0 if not 
 \end{DoxyReturn}
+
+
+Definition at line 68 of file checking\+Functions.\+c.
+
 \mbox{\Hypertarget{checking_functions_8h_a2ac18aa50d957f55b5cbae936dcec0e9}\label{checking_functions_8h_a2ac18aa50d957f55b5cbae936dcec0e9}} 
 \index{checkingFunctions.h@{checkingFunctions.h}!checkAllMinesMarked@{checkAllMinesMarked}}
 \index{checkAllMinesMarked@{checkAllMinesMarked}!checkingFunctions.h@{checkingFunctions.h}}
@@ -73,6 +79,10 @@ This function checks if all mines are marked.
 \begin{DoxyReturn}{Returns}
 1 if all mines marked are correct, 0 if not 
 \end{DoxyReturn}
+
+
+Definition at line 41 of file checking\+Functions.\+c.
+
 \mbox{\Hypertarget{checking_functions_8h_a033e0bef0eb73824715c58ebea61087b}\label{checking_functions_8h_a033e0bef0eb73824715c58ebea61087b}} 
 \index{checkingFunctions.h@{checkingFunctions.h}!checkMainParameters@{checkMainParameters}}
 \index{checkMainParameters@{checkMainParameters}!checkingFunctions.h@{checkingFunctions.h}}
@@ -99,6 +109,32 @@ This functions checks the arguments given, when main function was called.
 \begin{DoxyReturn}{Returns}
 1 if error anywhere, 0 if no error 
 \end{DoxyReturn}
+
+
+Definition at line 129 of file checking\+Functions.\+c.
+
+\mbox{\Hypertarget{checking_functions_8h_a60c62964182224f537d88755337ebf19}\label{checking_functions_8h_a60c62964182224f537d88755337ebf19}} 
+\index{checkingFunctions.h@{checkingFunctions.h}!isAlphaSwitch@{isAlphaSwitch}}
+\index{isAlphaSwitch@{isAlphaSwitch}!checkingFunctions.h@{checkingFunctions.h}}
+\doxysubsubsection{\texorpdfstring{isAlphaSwitch()}{isAlphaSwitch()}}
+{\footnotesize\ttfamily int is\+Alpha\+Switch (\begin{DoxyParamCaption}\item[{char}]{alpha }\end{DoxyParamCaption})}
+
+
+
+This function checks if the given letter is part of the uppercase alphabet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alpha} & the given letter to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if charc alpha is a letter, 0 if not 
+\end{DoxyReturn}
+
+
+Definition at line 108 of file checking\+Functions.\+c.
+
 \mbox{\Hypertarget{checking_functions_8h_a815dfc28204b922344916fe04bc9682d}\label{checking_functions_8h_a815dfc28204b922344916fe04bc9682d}} 
 \index{checkingFunctions.h@{checkingFunctions.h}!isDigit@{isDigit}}
 \index{isDigit@{isDigit}!checkingFunctions.h@{checkingFunctions.h}}
@@ -107,7 +143,7 @@ This functions checks the arguments given, when main function was called.
 
 
 
-This function checks if the given chracter is a number. 
+O\+LD -\/ This function is similar to \mbox{\hyperlink{checking_functions_8c_a97c5442561c1a0beb953467bc01438a4}{is\+Digit\+Switch()}};. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -117,6 +153,10 @@ This function checks if the given chracter is a number.
 \begin{DoxyReturn}{Returns}
 1 if number, 0 if not number 
 \end{DoxyReturn}
+
+
+Definition at line 28 of file checking\+Functions.\+c.
+
 \mbox{\Hypertarget{checking_functions_8h_a97c5442561c1a0beb953467bc01438a4}\label{checking_functions_8h_a97c5442561c1a0beb953467bc01438a4}} 
 \index{checkingFunctions.h@{checkingFunctions.h}!isDigitSwitch@{isDigitSwitch}}
 \index{isDigitSwitch@{isDigitSwitch}!checkingFunctions.h@{checkingFunctions.h}}
@@ -125,7 +165,7 @@ This function checks if the given chracter is a number.
 
 
 
-This function is similar to \mbox{\hyperlink{checking_functions_8c_a815dfc28204b922344916fe04bc9682d}{is\+Digit()}};. 
+This function checks if the given character is a number. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -135,6 +175,10 @@ This function is similar to \mbox{\hyperlink{checking_functions_8c_a815dfc28204b
 \begin{DoxyReturn}{Returns}
 1 if charc digit is a number, 0 if not 
 \end{DoxyReturn}
+
+
+Definition at line 88 of file checking\+Functions.\+c.
+
 \mbox{\Hypertarget{checking_functions_8h_a412a1045ea1433ad50c9f0865a644c08}\label{checking_functions_8h_a412a1045ea1433ad50c9f0865a644c08}} 
 \index{checkingFunctions.h@{checkingFunctions.h}!partOfAlphabet@{partOfAlphabet}}
 \index{partOfAlphabet@{partOfAlphabet}!checkingFunctions.h@{checkingFunctions.h}}
@@ -143,7 +187,7 @@ This function is similar to \mbox{\hyperlink{checking_functions_8c_a815dfc28204b
 
 
 
-This function checks if the given letter is part of the uppercase alphabet. 
+O\+LD -\/ This function is similar to \mbox{\hyperlink{checking_functions_8c_a97f3fe444eb62bcbd36939a2c8a7e22f}{is\+Alpha\+Switch()}};. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -153,3 +197,7 @@ This function checks if the given letter is part of the uppercase alphabet.
 \begin{DoxyReturn}{Returns}
 1 when part of upper alphabet, 0 if not part of alph. 
 \end{DoxyReturn}
+
+
+Definition at line 16 of file checking\+Functions.\+c.
+
