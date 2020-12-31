@@ -23,8 +23,9 @@ YES **Reveal neighbor zeroes Task (15 points)**
 YES **Read Matrix and Mines from argv Task (15 points)**  
 YES **Mark a mine [?] Task (15 points)**  
 YES **Save/Load Player Statistics Task (15 points)**  
-NO **Abort/Load the game Task (15 points)**  
+~ **Abort/Load the game Task (15 points)**  
+SAVE, write `save` or `s` into the cmd to save the statistics & game  
 NO **Use ncurses Task (25 points)**
 ### Additional features
-* help ..to be added  
-* exit .. to be added  
+* HELP, write `help` or `h` into the cmd to get a tip  
+* EXIT, write `exit` or `e` into the cmd to exit the game without saving statistics & game  
