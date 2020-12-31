@@ -25,7 +25,7 @@ Task description can be found here [Tasks](TASK.adoc)
 :white_check_mark: **Mark a mine [?] Task (15 points)**  
 :white_check_mark: **Save/Load Player Statistics Task (15 points)**  
 :wavy_dash: **Abort/Load the game Task (15 points)**  
-* SAVE, write `save` or `s` into the cmd to save statistics and the game
+SAVE, write `save` or `s` into the cmd to save statistics and the game  
 :x: **Use ncurses Task (25 points)**
 ### *Additional features*
 * HELP, write `help` or `h` into the cmd to get a tip  
