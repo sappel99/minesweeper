@@ -59,9 +59,7 @@ int main(int argc, char* argv[]) {
     }
 
     struct matrix list = {0, 0, 0, "|", " ", NULL};
-    //printf("Print doesnt work\n");
     generateMatrix(0, 1, 1, 'A', &list, rows, cols);
-    //printf("Works\n");
     setMines(list, mines, rows, cols, minesIndex);
     calculateMineValues(list, mines, cols, minesIndex);
     revealFirst(list, rows, cols);
@@ -71,14 +69,12 @@ int main(int argc, char* argv[]) {
     askPlayerInfo(spielername);
     loadPlayerInfo(spielername,&playedGames,&gamesWon,&gamesLost,&openedCells);
 
-    //printStructure(list);
     printPublic(list);
-    //printHidden(list);
 
     int playGame = 1;
     while (playGame) {
         switch (readAndReveal(list, rows)) {
-            case 1: {
+            case 1: { //Mine found
                 printf("\033[0;31mGame lost - Mine found\033[0m\n");
                 openedCells++;playedGames++;gamesLost++;savePlayerInfo(spielername,playedGames,gamesWon,gamesLost,openedCells);
                 printPublic(list);
@@ -87,15 +83,13 @@ int main(int argc, char* argv[]) {
                 playGame = 0;
                 break;
             }
-            case 2: {
-                //exit
+            case 2: { //Player exit
                 printInfo("Game exit initiated..\n");
                 printInfo("Playing data discarded\n");
                 playGame = 0;
                 break;
             }
-            case 3: {
-                //save
+            case 3: { //Player save
                 printInfo("Game exit initiated..\n");
                 printInfo("Playing data saved\n");
                 savePlayerInfo(spielername,playedGames,gamesWon,gamesLost,openedCells);
@@ -103,12 +97,11 @@ int main(int argc, char* argv[]) {
                 playGame = 0;
                 break;
             }
-            case 4: {
-                //help
+            case 4: { //Player help
                 printZeroInfo(list,rows,cols);
                 break;
             }
-            default: {
+            default: { //Player opened cell
                 openedCells++;
                 printPublic(list);
                 printMineInfo(list, mines);
@@ -133,12 +126,7 @@ int main(int argc, char* argv[]) {
     }
 
     printf("Game finished\n");
-    //printf("2nd print\n");
     free_list(&list);
-    //printf("3rd print\n");
-    //printf("4th\n");
-
-    //printf("Unreachable\n");
 
     return EXIT_SUCCESS;
 }

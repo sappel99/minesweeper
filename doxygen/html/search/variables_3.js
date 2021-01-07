@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['publicsymbol_108',['publicSymbol',['../structmatrix.html#a610c3c2f7efeef2aabfd90615f9a96d9',1,'matrix']]]
+  ['publicsymbol_104',['publicSymbol',['../structmatrix.html#a610c3c2f7efeef2aabfd90615f9a96d9',1,'matrix']]]
 ];

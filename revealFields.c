@@ -15,7 +15,7 @@
  * @return count number of new fields opened
  */
 int revealAroundXY(struct matrix list,int xIn, int yIn){
-    int anzNeue0 = 0;
+    int anzNeue0 = 0; // this counts the number of new zeroes found around XY
     struct matrix *it = &list;
     while (it != NULL) {
         if(it->x==xIn&&it->y==yIn-1){
@@ -59,7 +59,6 @@ int revealAroundXY(struct matrix list,int xIn, int yIn){
 int findMoreZeroes(struct matrix list,int rows){
     for(int i = 0;i<rows;i++) {
         struct matrix *it = &list;
-        //printf("%d\n", random);
         while (it != NULL) {
             if (strcmp(it->hiddenSymbol, "0") == 0 && strcmp(it->publicSymbol, "0") == 0) {
                 if (revealAroundXY(list, it->x, it->y) == 0) {
@@ -92,9 +91,9 @@ int turnPublicZeroIntoSpace(struct matrix list){
  * @return 0 if successful
  */
 int readAndReveal(struct matrix list,int rows){
-    int falscheEingabe = 1;
+    int falscheEingabe = 1; //boolean for checking if Eingabe is useful
     int xIn = 0, yIn = 0;
-    int eingabe0Fragezeichen = 0;
+    int eingabe0Fragezeichen = 0; //boolean for checking if first char of Eingabe is "?"
     while(falscheEingabe) {
         char eingabe[256];
         printf("\033[0;34mEingabe:\033[0m\n");

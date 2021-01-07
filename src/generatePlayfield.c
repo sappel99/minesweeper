@@ -78,11 +78,9 @@ int generateMatrix(int x, int y, int index,char alph,struct matrix *list, int ro
                     return 1;
                 }
             }
-
         }
         y++;
         index++;
-
     }
     return 0;
 }
@@ -124,7 +122,6 @@ int setMines(struct matrix list,int mines,int rows,int cols, int minesIndex[mine
  */
 int calculateMineValues(struct matrix list,int mines,int cols, const int minesIndex[mines]){
     for(int i = 0; i < mines; i++){
-        //printf("%d ", minesIndex[i]);
         struct matrix *it = &list;
         while (it != NULL) {
             if(it->index==minesIndex[i]-1&&strcmp(it->publicSymbol,"|")!=0&&strcmp(it->hiddenSymbol,"M")!=0&&isAlphaSwitch(it->publicSymbol[0])==0){
@@ -169,7 +166,6 @@ int revealFirst(struct matrix list,int rows, int cols){
     while(gesetzt == 0) {
         struct matrix *it = &list;
         int random = rand() % (rows * cols);
-        //printf("%d\n", random);
         while (it != NULL) {
             if (it->index == random) {
                 if (strcmp(it->publicSymbol, "|") != 0 && strcmp(it->hiddenSymbol, "M") != 0 &&

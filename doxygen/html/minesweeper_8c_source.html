@@ -5,10 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Minesweeper: C:/Users/simon/CLionProjects/bic1_prg_tasks/projects/130_minesweeper/minesweeper.c Source File</title>
+<title>World of Minesweeper: C:/Users/simon/CLionProjects/bic1_prg_tasks/projects/130_minesweeper/minesweeper.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -20,9 +24,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="rsz_world-of-minesweeper.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="rsz_rsz_world-of-minesweeper.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Minesweeper
+   <div id="projectname">World of Minesweeper
    &#160;<span id="projectnumber">V1</span>
    </div>
   </td>
@@ -47,6 +51,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('minesweeper_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,11 +82,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_407434034662d9b411d5e4671f839977.html">simon</a></li><li class="navelem"><a class="el" href="dir_e3df3acaf7e081b2d1e4fa702b99846f.html">CLionProjects</a></li><li class="navelem"><a class="el" href="dir_41b08a779f1029baa1a043747248c275.html">bic1_prg_tasks</a></li><li class="navelem"><a class="el" href="dir_bc0603c47f732419ee66d076614caf2f.html">projects</a></li><li class="navelem"><a class="el" href="dir_4905c2a059c126481fe862de1effc122.html">130_minesweeper</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">minesweeper.c</div>  </div>
@@ -84,7 +100,7 @@ $(function() {
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="minesweeper_8h.html#a5f75e923fd544ee4af222be4b3604839">   23</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="minesweeper_8c.html#a5f75e923fd544ee4af222be4b3604839">free_list</a>(<span class="keyword">struct</span> <a class="code" href="structmatrix.html">matrix</a> *start) {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">struct </span><a class="code" href="structmatrix.html">matrix</a> *it = start-&gt;<a class="code" href="structmatrix.html#a7e7ed282a62db17266824ee9b4fc6643">next</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">while</span> (it != <a class="code" href="minesweeper_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">while</span> (it != NULL) {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">struct </span><a class="code" href="structmatrix.html">matrix</a> *item = it;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        it = it-&gt;<a class="code" href="structmatrix.html#a7e7ed282a62db17266824ee9b4fc6643">next</a>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        free(item);</div>
@@ -108,96 +124,85 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        minesIndex[i] = 0;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">struct </span><a class="code" href="structmatrix.html">matrix</a> list = {0, 0, 0, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot; &quot;</span>, <a class="code" href="minesweeper_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>};</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">//printf(&quot;Print doesnt work\n&quot;);</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="generate_playfield_8c.html#a73442ebb9e97541f7c834e8c302fb98c">generateMatrix</a>(0, 1, 1, <span class="charliteral">&#39;A&#39;</span>, &amp;list, rows, cols);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">//printf(&quot;Works\n&quot;);</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="generate_playfield_8c.html#acef14dcecd93220ef270bb78be3ba5d2">setMines</a>(list, mines, rows, cols, minesIndex);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="generate_playfield_8c.html#a8f815b4398b28d63d807edd910bc661a">calculateMineValues</a>(list, mines, cols, minesIndex);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="generate_playfield_8c.html#a4e462fd7a747d945ebb35273e6fb103e">revealFirst</a>(list, rows, cols);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">char</span> spielername[256];</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">int</span> playedGames =0,gamesWon=0,gamesLost=0,openedCells=0;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="player_info_8c.html#a4c252d74b54f8800de4b747fc0a31d7a">askPlayerInfo</a>(spielername);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="player_info_8c.html#aea86e3a1a9c87a719ef5f7ee5f59265e">loadPlayerInfo</a>(spielername,&amp;playedGames,&amp;gamesWon,&amp;gamesLost,&amp;openedCells);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">struct </span><a class="code" href="structmatrix.html">matrix</a> list = {0, 0, 0, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot; &quot;</span>, NULL};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="generate_playfield_8c.html#a73442ebb9e97541f7c834e8c302fb98c">generateMatrix</a>(0, 1, 1, <span class="charliteral">&#39;A&#39;</span>, &amp;list, rows, cols);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="generate_playfield_8c.html#acef14dcecd93220ef270bb78be3ba5d2">setMines</a>(list, mines, rows, cols, minesIndex);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="generate_playfield_8c.html#a8f815b4398b28d63d807edd910bc661a">calculateMineValues</a>(list, mines, cols, minesIndex);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="generate_playfield_8c.html#a4e462fd7a747d945ebb35273e6fb103e">revealFirst</a>(list, rows, cols);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">char</span> spielername[256];</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">int</span> playedGames =0,gamesWon=0,gamesLost=0,openedCells=0;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="player_info_8c.html#a4c252d74b54f8800de4b747fc0a31d7a">askPlayerInfo</a>(spielername);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="player_info_8c.html#aea86e3a1a9c87a719ef5f7ee5f59265e">loadPlayerInfo</a>(spielername,&amp;playedGames,&amp;gamesWon,&amp;gamesLost,&amp;openedCells);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="prints_8c.html#a8e1b3018d60540a60d80dc9dd35f1bc9">printPublic</a>(list);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">//printStructure(list);</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="prints_8c.html#a8e1b3018d60540a60d80dc9dd35f1bc9">printPublic</a>(list);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">//printHidden(list);</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">int</span> playGame = 1;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">while</span> (playGame) {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">switch</span> (<a class="code" href="reveal_fields_8c.html#a7b47a59db5b7cf559d232e71e40e9988">readAndReveal</a>(list, rows)) {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">case</span> 1: {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                printf(<span class="stringliteral">&quot;\033[0;31mGame lost - Mine found\033[0m\n&quot;</span>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                openedCells++;playedGames++;gamesLost++;<a class="code" href="player_info_8c.html#a0ec4485ee4b552f8de8cf3b1dee12893">savePlayerInfo</a>(spielername,playedGames,gamesWon,gamesLost,openedCells);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <a class="code" href="prints_8c.html#a8e1b3018d60540a60d80dc9dd35f1bc9">printPublic</a>(list);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <a class="code" href="prints_8c.html#a0c0e42918a62eaa360ef2a550fab106e">printHidden</a>(list);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                playGame = 0;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">case</span> 2: {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="comment">//exit</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <a class="code" href="prints_8c.html#a0934dc1a1f500bec39918061ab3650e7">printInfo</a>(<span class="stringliteral">&quot;Game exit initiated..\n&quot;</span>);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <a class="code" href="prints_8c.html#a0934dc1a1f500bec39918061ab3650e7">printInfo</a>(<span class="stringliteral">&quot;Playing data discarded\n&quot;</span>);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                playGame = 0;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">case</span> 3: {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="comment">//save</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <a class="code" href="prints_8c.html#a0934dc1a1f500bec39918061ab3650e7">printInfo</a>(<span class="stringliteral">&quot;Game exit initiated..\n&quot;</span>);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <a class="code" href="prints_8c.html#a0934dc1a1f500bec39918061ab3650e7">printInfo</a>(<span class="stringliteral">&quot;Playing data saved\n&quot;</span>);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <a class="code" href="player_info_8c.html#a0ec4485ee4b552f8de8cf3b1dee12893">savePlayerInfo</a>(spielername,playedGames,gamesWon,gamesLost,openedCells);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <a class="code" href="player_info_8c.html#aef86fd3cd76a83217fd07dfc5860a562">saveGame</a>(spielername,list);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                playGame = 0;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">case</span> 4: {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="comment">//help</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <a class="code" href="prints_8c.html#a2d08c9e8bffe26d1120701e3952fa63e">printZeroInfo</a>(list,rows,cols);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            }</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">default</span>: {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                openedCells++;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <a class="code" href="prints_8c.html#a8e1b3018d60540a60d80dc9dd35f1bc9">printPublic</a>(list);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <a class="code" href="prints_8c.html#aff976c4877918f9873903a137f262119">printMineInfo</a>(list, mines);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            }</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="checking_functions_8c.html#a2ac18aa50d957f55b5cbae936dcec0e9">checkAllMinesMarked</a>(list, mines) == 1) {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <a class="code" href="prints_8c.html#a0934dc1a1f500bec39918061ab3650e7">printInfo</a>(<span class="stringliteral">&quot;Game won - All mines marked\n&quot;</span>);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            openedCells++;playedGames++;gamesWon++;<a class="code" href="player_info_8c.html#a0ec4485ee4b552f8de8cf3b1dee12893">savePlayerInfo</a>(spielername,playedGames,gamesWon,gamesLost,openedCells);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <a class="code" href="prints_8c.html#a8e1b3018d60540a60d80dc9dd35f1bc9">printPublic</a>(list);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <a class="code" href="prints_8c.html#a0c0e42918a62eaa360ef2a550fab106e">printHidden</a>(list);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="checking_functions_8c.html#a7d96bf3762dc88a649026c9412b8859f">checkAllFieldsOpened</a>(list, rows, cols, mines) == 1) {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <a class="code" href="prints_8c.html#a0934dc1a1f500bec39918061ab3650e7">printInfo</a>(<span class="stringliteral">&quot;Game won - All Fields opened\n&quot;</span>);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            openedCells++;playedGames++;gamesWon++;<a class="code" href="player_info_8c.html#a0ec4485ee4b552f8de8cf3b1dee12893">savePlayerInfo</a>(spielername,playedGames,gamesWon,gamesLost,openedCells);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <a class="code" href="prints_8c.html#a8e1b3018d60540a60d80dc9dd35f1bc9">printPublic</a>(list);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <a class="code" href="prints_8c.html#a0c0e42918a62eaa360ef2a550fab106e">printHidden</a>(list);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        }</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">int</span> playGame = 1;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">while</span> (playGame) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">switch</span> (<a class="code" href="reveal_fields_8c.html#a7b47a59db5b7cf559d232e71e40e9988">readAndReveal</a>(list, rows)) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">case</span> 1: { <span class="comment">//Mine found</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                printf(<span class="stringliteral">&quot;\033[0;31mGame lost - Mine found\033[0m\n&quot;</span>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                openedCells++;playedGames++;gamesLost++;<a class="code" href="player_info_8c.html#a0ec4485ee4b552f8de8cf3b1dee12893">savePlayerInfo</a>(spielername,playedGames,gamesWon,gamesLost,openedCells);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <a class="code" href="prints_8c.html#a8e1b3018d60540a60d80dc9dd35f1bc9">printPublic</a>(list);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                <a class="code" href="prints_8c.html#a0c0e42918a62eaa360ef2a550fab106e">printHidden</a>(list);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                playGame = 0;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">case</span> 2: { <span class="comment">//Player exit</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <a class="code" href="prints_8c.html#a0934dc1a1f500bec39918061ab3650e7">printInfo</a>(<span class="stringliteral">&quot;Game exit initiated..\n&quot;</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <a class="code" href="prints_8c.html#a0934dc1a1f500bec39918061ab3650e7">printInfo</a>(<span class="stringliteral">&quot;Playing data discarded\n&quot;</span>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                playGame = 0;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">case</span> 3: { <span class="comment">//Player save</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <a class="code" href="prints_8c.html#a0934dc1a1f500bec39918061ab3650e7">printInfo</a>(<span class="stringliteral">&quot;Game exit initiated..\n&quot;</span>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <a class="code" href="prints_8c.html#a0934dc1a1f500bec39918061ab3650e7">printInfo</a>(<span class="stringliteral">&quot;Playing data saved\n&quot;</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <a class="code" href="player_info_8c.html#a0ec4485ee4b552f8de8cf3b1dee12893">savePlayerInfo</a>(spielername,playedGames,gamesWon,gamesLost,openedCells);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <a class="code" href="player_info_8c.html#aef86fd3cd76a83217fd07dfc5860a562">saveGame</a>(spielername,list);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                playGame = 0;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">case</span> 4: { <span class="comment">//Player help</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <a class="code" href="prints_8c.html#a2d08c9e8bffe26d1120701e3952fa63e">printZeroInfo</a>(list,rows,cols);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">default</span>: { <span class="comment">//Player opened cell</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                openedCells++;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <a class="code" href="prints_8c.html#a8e1b3018d60540a60d80dc9dd35f1bc9">printPublic</a>(list);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <a class="code" href="prints_8c.html#aff976c4877918f9873903a137f262119">printMineInfo</a>(list, mines);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="checking_functions_8c.html#a2ac18aa50d957f55b5cbae936dcec0e9">checkAllMinesMarked</a>(list, mines) == 1) {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <a class="code" href="prints_8c.html#a0934dc1a1f500bec39918061ab3650e7">printInfo</a>(<span class="stringliteral">&quot;Game won - All mines marked\n&quot;</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            openedCells++;playedGames++;gamesWon++;<a class="code" href="player_info_8c.html#a0ec4485ee4b552f8de8cf3b1dee12893">savePlayerInfo</a>(spielername,playedGames,gamesWon,gamesLost,openedCells);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <a class="code" href="prints_8c.html#a8e1b3018d60540a60d80dc9dd35f1bc9">printPublic</a>(list);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <a class="code" href="prints_8c.html#a0c0e42918a62eaa360ef2a550fab106e">printHidden</a>(list);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="checking_functions_8c.html#a7d96bf3762dc88a649026c9412b8859f">checkAllFieldsOpened</a>(list, rows, cols, mines) == 1) {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <a class="code" href="prints_8c.html#a0934dc1a1f500bec39918061ab3650e7">printInfo</a>(<span class="stringliteral">&quot;Game won - All Fields opened\n&quot;</span>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            openedCells++;playedGames++;gamesWon++;<a class="code" href="player_info_8c.html#a0ec4485ee4b552f8de8cf3b1dee12893">savePlayerInfo</a>(spielername,playedGames,gamesWon,gamesLost,openedCells);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <a class="code" href="prints_8c.html#a8e1b3018d60540a60d80dc9dd35f1bc9">printPublic</a>(list);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <a class="code" href="prints_8c.html#a0c0e42918a62eaa360ef2a550fab106e">printHidden</a>(list);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    printf(<span class="stringliteral">&quot;Game finished\n&quot;</span>);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="minesweeper_8c.html#a5f75e923fd544ee4af222be4b3604839">free_list</a>(&amp;list);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    printf(<span class="stringliteral">&quot;Game finished\n&quot;</span>);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">//printf(&quot;2nd print\n&quot;);</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="minesweeper_8c.html#a5f75e923fd544ee4af222be4b3604839">free_list</a>(&amp;list);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="comment">//printf(&quot;3rd print\n&quot;);</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="comment">//printf(&quot;4th\n&quot;);</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="comment">//printf(&quot;Unreachable\n&quot;);</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="astructmatrix_html_a7e7ed282a62db17266824ee9b4fc6643"><div class="ttname"><a href="structmatrix.html#a7e7ed282a62db17266824ee9b4fc6643">matrix::next</a></div><div class="ttdeci">struct matrix * next</div><div class="ttdef"><b>Definition:</b> <a href="minesweeper_8h_source.html#l00023">minesweeper.h:23</a></div></div>
 <div class="ttc" id="aplayer_info_8h_html"><div class="ttname"><a href="player_info_8h.html">playerInfo.h</a></div><div class="ttdoc">Header file for the functions, which are used for loading and saving player infos.</div></div>
-<div class="ttc" id="aplayer_info_8c_html_a0ec4485ee4b552f8de8cf3b1dee12893"><div class="ttname"><a href="player_info_8c.html#a0ec4485ee4b552f8de8cf3b1dee12893">savePlayerInfo</a></div><div class="ttdeci">int savePlayerInfo(char spielername[256], int playedGames, int gamesWon, int gamesLost, int openedCells)</div><div class="ttdoc">This function saves the statistics into a local file.</div><div class="ttdef"><b>Definition:</b> <a href="player_info_8c_source.html#l00112">playerInfo.c:112</a></div></div>
+<div class="ttc" id="aplayer_info_8c_html_a0ec4485ee4b552f8de8cf3b1dee12893"><div class="ttname"><a href="player_info_8c.html#a0ec4485ee4b552f8de8cf3b1dee12893">savePlayerInfo</a></div><div class="ttdeci">int savePlayerInfo(char spielername[256], int playedGames, int gamesWon, int gamesLost, int openedCells)</div><div class="ttdoc">This function saves the statistics into a local file.</div><div class="ttdef"><b>Definition:</b> <a href="player_info_8c_source.html#l00107">playerInfo.c:107</a></div></div>
 <div class="ttc" id="astructmatrix_html"><div class="ttname"><a href="structmatrix.html">matrix</a></div><div class="ttdef"><b>Definition:</b> <a href="minesweeper_8h_source.html#l00017">minesweeper.h:17</a></div></div>
 <div class="ttc" id="areveal_fields_8h_html"><div class="ttname"><a href="reveal_fields_8h.html">revealFields.h</a></div><div class="ttdoc">Header file for the functions, which are used for revealing Fields.</div></div>
 <div class="ttc" id="aminesweeper_8c_html_a48f37c08a9b277d9ede8155b5c3634e3"><div class="ttname"><a href="minesweeper_8c.html#a48f37c08a9b277d9ede8155b5c3634e3">randomNumber</a></div><div class="ttdeci">int randomNumber(int x, int y)</div><div class="ttdoc">Returns a random number between x and y.</div><div class="ttdef"><b>Definition:</b> <a href="minesweeper_8c_source.html#l00037">minesweeper.c:37</a></div></div>
@@ -210,25 +215,27 @@ $(function() {
 <div class="ttc" id="astructmatrix_html_a6150e0515f7202e2fb518f7206ed97dc"><div class="ttname"><a href="structmatrix.html#a6150e0515f7202e2fb518f7206ed97dc">matrix::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="minesweeper_8h_source.html#l00018">minesweeper.h:18</a></div></div>
 <div class="ttc" id="aprints_8c_html_a8e1b3018d60540a60d80dc9dd35f1bc9"><div class="ttname"><a href="prints_8c.html#a8e1b3018d60540a60d80dc9dd35f1bc9">printPublic</a></div><div class="ttdeci">int printPublic(struct matrix list)</div><div class="ttdoc">Prints the public matrix.</div><div class="ttdef"><b>Definition:</b> <a href="prints_8c_source.html#l00055">prints.c:55</a></div></div>
 <div class="ttc" id="aprints_8c_html_a2d08c9e8bffe26d1120701e3952fa63e"><div class="ttname"><a href="prints_8c.html#a2d08c9e8bffe26d1120701e3952fa63e">printZeroInfo</a></div><div class="ttdeci">int printZeroInfo(struct matrix list, int rows, int cols)</div><div class="ttdef"><b>Definition:</b> <a href="prints_8c_source.html#l00115">prints.c:115</a></div></div>
-<div class="ttc" id="agenerate_playfield_8c_html_a4e462fd7a747d945ebb35273e6fb103e"><div class="ttname"><a href="generate_playfield_8c.html#a4e462fd7a747d945ebb35273e6fb103e">revealFirst</a></div><div class="ttdeci">int revealFirst(struct matrix list, int rows, int cols)</div><div class="ttdoc">This function randomly reveals the first number to begin with.</div><div class="ttdef"><b>Definition:</b> <a href="generate_playfield_8c_source.html#l00167">generatePlayfield.c:167</a></div></div>
+<div class="ttc" id="agenerate_playfield_8c_html_a4e462fd7a747d945ebb35273e6fb103e"><div class="ttname"><a href="generate_playfield_8c.html#a4e462fd7a747d945ebb35273e6fb103e">revealFirst</a></div><div class="ttdeci">int revealFirst(struct matrix list, int rows, int cols)</div><div class="ttdoc">This function randomly reveals the first number to begin with.</div><div class="ttdef"><b>Definition:</b> <a href="generate_playfield_8c_source.html#l00164">generatePlayfield.c:164</a></div></div>
 <div class="ttc" id="aprints_8c_html_a0934dc1a1f500bec39918061ab3650e7"><div class="ttname"><a href="prints_8c.html#a0934dc1a1f500bec39918061ab3650e7">printInfo</a></div><div class="ttdeci">int printInfo(char *text)</div><div class="ttdoc">Prints a green colored text to show info.</div><div class="ttdef"><b>Definition:</b> <a href="prints_8c_source.html#l00046">prints.c:46</a></div></div>
-<div class="ttc" id="agenerate_playfield_8c_html_acef14dcecd93220ef270bb78be3ba5d2"><div class="ttname"><a href="generate_playfield_8c.html#acef14dcecd93220ef270bb78be3ba5d2">setMines</a></div><div class="ttdeci">int setMines(struct matrix list, int mines, int rows, int cols, int minesIndex[mines])</div><div class="ttdoc">This function sets the mines randomly in the playing field.</div><div class="ttdef"><b>Definition:</b> <a href="generate_playfield_8c_source.html#l00098">generatePlayfield.c:98</a></div></div>
+<div class="ttc" id="agenerate_playfield_8c_html_acef14dcecd93220ef270bb78be3ba5d2"><div class="ttname"><a href="generate_playfield_8c.html#acef14dcecd93220ef270bb78be3ba5d2">setMines</a></div><div class="ttdeci">int setMines(struct matrix list, int mines, int rows, int cols, int minesIndex[mines])</div><div class="ttdoc">This function sets the mines randomly in the playing field.</div><div class="ttdef"><b>Definition:</b> <a href="generate_playfield_8c_source.html#l00096">generatePlayfield.c:96</a></div></div>
 <div class="ttc" id="achecking_functions_8c_html_a7d96bf3762dc88a649026c9412b8859f"><div class="ttname"><a href="checking_functions_8c.html#a7d96bf3762dc88a649026c9412b8859f">checkAllFieldsOpened</a></div><div class="ttdeci">int checkAllFieldsOpened(struct matrix list, int rows, int cols, int mines)</div><div class="ttdoc">This function checks if all number fields are opened.</div><div class="ttdef"><b>Definition:</b> <a href="checking_functions_8c_source.html#l00068">checkingFunctions.c:68</a></div></div>
 <div class="ttc" id="achecking_functions_8c_html_a2ac18aa50d957f55b5cbae936dcec0e9"><div class="ttname"><a href="checking_functions_8c.html#a2ac18aa50d957f55b5cbae936dcec0e9">checkAllMinesMarked</a></div><div class="ttdeci">int checkAllMinesMarked(struct matrix list, int mines)</div><div class="ttdoc">This function checks if all mines are marked.</div><div class="ttdef"><b>Definition:</b> <a href="checking_functions_8c_source.html#l00041">checkingFunctions.c:41</a></div></div>
 <div class="ttc" id="achecking_functions_8c_html_a033e0bef0eb73824715c58ebea61087b"><div class="ttname"><a href="checking_functions_8c.html#a033e0bef0eb73824715c58ebea61087b">checkMainParameters</a></div><div class="ttdeci">int checkMainParameters(int argc, char *argv[], int *x, int *y, int *mines)</div><div class="ttdoc">This functions checks the arguments given, when main function was called.</div><div class="ttdef"><b>Definition:</b> <a href="checking_functions_8c_source.html#l00129">checkingFunctions.c:129</a></div></div>
-<div class="ttc" id="agenerate_playfield_8c_html_a8f815b4398b28d63d807edd910bc661a"><div class="ttname"><a href="generate_playfield_8c.html#a8f815b4398b28d63d807edd910bc661a">calculateMineValues</a></div><div class="ttdeci">int calculateMineValues(struct matrix list, int mines, int cols, const int minesIndex[mines])</div><div class="ttdoc">This function calculates the hidden value for each field surrounding a mine.</div><div class="ttdef"><b>Definition:</b> <a href="generate_playfield_8c_source.html#l00125">generatePlayfield.c:125</a></div></div>
-<div class="ttc" id="aplayer_info_8c_html_aef86fd3cd76a83217fd07dfc5860a562"><div class="ttname"><a href="player_info_8c.html#aef86fd3cd76a83217fd07dfc5860a562">saveGame</a></div><div class="ttdeci">int saveGame(char spielername[256], struct matrix list)</div><div class="ttdoc">This function saves the game matrix into a local file.</div><div class="ttdef"><b>Definition:</b> <a href="player_info_8c_source.html#l00136">playerInfo.c:136</a></div></div>
-<div class="ttc" id="aminesweeper_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="minesweeper_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="minesweeper_8h_source.html#l00008">minesweeper.h:8</a></div></div>
+<div class="ttc" id="agenerate_playfield_8c_html_a8f815b4398b28d63d807edd910bc661a"><div class="ttname"><a href="generate_playfield_8c.html#a8f815b4398b28d63d807edd910bc661a">calculateMineValues</a></div><div class="ttdeci">int calculateMineValues(struct matrix list, int mines, int cols, const int minesIndex[mines])</div><div class="ttdoc">This function calculates the hidden value for each field surrounding a mine.</div><div class="ttdef"><b>Definition:</b> <a href="generate_playfield_8c_source.html#l00123">generatePlayfield.c:123</a></div></div>
+<div class="ttc" id="aplayer_info_8c_html_aef86fd3cd76a83217fd07dfc5860a562"><div class="ttname"><a href="player_info_8c.html#aef86fd3cd76a83217fd07dfc5860a562">saveGame</a></div><div class="ttdeci">int saveGame(char spielername[256], struct matrix list)</div><div class="ttdoc">This function saves the game matrix into a local file.</div><div class="ttdef"><b>Definition:</b> <a href="player_info_8c_source.html#l00131">playerInfo.c:131</a></div></div>
 <div class="ttc" id="achecking_functions_8h_html"><div class="ttname"><a href="checking_functions_8h.html">checkingFunctions.h</a></div><div class="ttdoc">Header file for the functions, which are used for either checking events or checking inputs.</div></div>
-<div class="ttc" id="areveal_fields_8c_html_a7b47a59db5b7cf559d232e71e40e9988"><div class="ttname"><a href="reveal_fields_8c.html#a7b47a59db5b7cf559d232e71e40e9988">readAndReveal</a></div><div class="ttdeci">int readAndReveal(struct matrix list, int rows)</div><div class="ttdoc">This function reads a coordinate from the user and either opens it or marks (?) it.</div><div class="ttdef"><b>Definition:</b> <a href="reveal_fields_8c_source.html#l00094">revealFields.c:94</a></div></div>
+<div class="ttc" id="areveal_fields_8c_html_a7b47a59db5b7cf559d232e71e40e9988"><div class="ttname"><a href="reveal_fields_8c.html#a7b47a59db5b7cf559d232e71e40e9988">readAndReveal</a></div><div class="ttdeci">int readAndReveal(struct matrix list, int rows)</div><div class="ttdoc">This function reads a coordinate from the user and either opens it or marks (?) it.</div><div class="ttdef"><b>Definition:</b> <a href="reveal_fields_8c_source.html#l00093">revealFields.c:93</a></div></div>
 <div class="ttc" id="agenerate_playfield_8c_html_a73442ebb9e97541f7c834e8c302fb98c"><div class="ttname"><a href="generate_playfield_8c.html#a73442ebb9e97541f7c834e8c302fb98c">generateMatrix</a></div><div class="ttdeci">int generateMatrix(int x, int y, int index, char alph, struct matrix *list, int rows, int cols)</div><div class="ttdoc">This function calculates the correct coordinates and symbols for each element.</div><div class="ttdef"><b>Definition:</b> <a href="generate_playfield_8c_source.html#l00062">generatePlayfield.c:62</a></div></div>
 <div class="ttc" id="aplayer_info_8c_html_a4c252d74b54f8800de4b747fc0a31d7a"><div class="ttname"><a href="player_info_8c.html#a4c252d74b54f8800de4b747fc0a31d7a">askPlayerInfo</a></div><div class="ttdeci">int askPlayerInfo(char eingabe[256])</div><div class="ttdoc">This function asks for the player name.</div><div class="ttdef"><b>Definition:</b> <a href="player_info_8c_source.html#l00018">playerInfo.c:18</a></div></div>
 <div class="ttc" id="astructmatrix_html_a0a2f84ed7838f07779ae24c5a9086d33"><div class="ttname"><a href="structmatrix.html#a0a2f84ed7838f07779ae24c5a9086d33">matrix::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> <a href="minesweeper_8h_source.html#l00019">minesweeper.h:19</a></div></div>
 <div class="ttc" id="aminesweeper_8c_html_a5f75e923fd544ee4af222be4b3604839"><div class="ttname"><a href="minesweeper_8c.html#a5f75e923fd544ee4af222be4b3604839">free_list</a></div><div class="ttdeci">void free_list(struct matrix *start)</div><div class="ttdoc">Frees all elements in the struct matrix list.</div><div class="ttdef"><b>Definition:</b> <a href="minesweeper_8c_source.html#l00023">minesweeper.c:23</a></div></div>
 <div class="ttc" id="aprints_8h_html"><div class="ttname"><a href="prints_8h.html">prints.h</a></div><div class="ttdoc">Header file for the functions, which are used for printing.</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_407434034662d9b411d5e4671f839977.html">simon</a></li><li class="navelem"><a class="el" href="dir_e3df3acaf7e081b2d1e4fa702b99846f.html">CLionProjects</a></li><li class="navelem"><a class="el" href="dir_41b08a779f1029baa1a043747248c275.html">bic1_prg_tasks</a></li><li class="navelem"><a class="el" href="dir_bc0603c47f732419ee66d076614caf2f.html">projects</a></li><li class="navelem"><a class="el" href="dir_4905c2a059c126481fe862de1effc122.html">130_minesweeper</a></li><li class="navelem"><a class="el" href="minesweeper_8c.html">minesweeper.c</a></li>
+    <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
 </body>
 </html>

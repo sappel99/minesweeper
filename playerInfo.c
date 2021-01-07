@@ -54,7 +54,6 @@ int loadPlayerInfo(char spielername[256],int *playedGames, int *gamesWon, int *g
         printError("Error with playedGamesNumber in File");
         return 1;
     }
-    //printf("playedGames:%d\n",*playedGames);
 
     fgets(buff, 255, (FILE*)fptr);
     printf("%s", buff );
@@ -66,7 +65,6 @@ int loadPlayerInfo(char spielername[256],int *playedGames, int *gamesWon, int *g
         printError("Error with gamesWonNumber in File");
         return 1;
     }
-    //printf("gamesWon:%d\n",*gamesWon);
 
     fgets(buff, 255, (FILE*)fptr);
     printf("%s", buff );
@@ -78,7 +76,6 @@ int loadPlayerInfo(char spielername[256],int *playedGames, int *gamesWon, int *g
         printError("Error with gamesLostNumber in File");
         return 1;
     }
-    //printf("gamesLost:%d\n",*gamesLost);
 
     fgets(buff, 255, (FILE*)fptr);
     printf("%s", buff );
@@ -92,10 +89,8 @@ int loadPlayerInfo(char spielername[256],int *playedGames, int *gamesWon, int *g
         printError("Error with openedCellsNumber in File");
         return 1;
     }
-    //printf("openedCells:%d\n",*openedCells);
 
     fclose(fptr);
-
     printf("\n");
 
     return 0;
