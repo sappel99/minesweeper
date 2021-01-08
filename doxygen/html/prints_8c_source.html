@@ -150,28 +150,27 @@ $(document).ready(function(){initNavTree('prints_8c_source.html',''); initResiza
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        it = it-&gt;<a class="code" href="structmatrix.html#a7e7ed282a62db17266824ee9b4fc6643">next</a>;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    printf(<span class="stringliteral">&quot;\033[0;32mAll Mines: %d, Mines Marked: %d\033[0m\n&quot;</span>,mines,minesMarked);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="prints_8h.html#a2d08c9e8bffe26d1120701e3952fa63e">  115</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="prints_8c.html#a2d08c9e8bffe26d1120701e3952fa63e">printZeroInfo</a>(<span class="keyword">struct</span> <a class="code" href="structmatrix.html">matrix</a> list, <span class="keywordtype">int</span> rows, <span class="keywordtype">int</span> cols){</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">int</span> gesetzt = 0;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">while</span>(gesetzt == 0) {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keyword">struct </span><a class="code" href="structmatrix.html">matrix</a> *it = &amp;list;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordtype">int</span> random = rand() % (rows * cols);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="comment">//printf(&quot;%d\n&quot;, random);</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">while</span> (it != NULL) {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">if</span> (it-&gt;<a class="code" href="structmatrix.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> == random) {</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                <span class="keywordflow">if</span> (strcmp(it-&gt;<a class="code" href="structmatrix.html#af3b1cb28c61bd60cb3122742de48c573">hiddenSymbol</a>, <span class="stringliteral">&quot;0&quot;</span>) == 0){</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                    printf(<span class="stringliteral">&quot;There is a Zero at X:%d, Y:%d\n&quot;</span>,it-&gt;<a class="code" href="structmatrix.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>,it-&gt;<a class="code" href="structmatrix.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                    gesetzt++;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            }</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            it = it-&gt;<a class="code" href="structmatrix.html#a7e7ed282a62db17266824ee9b4fc6643">next</a>;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        }</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    printf(<span class="stringliteral">&quot;\033[0;32mAll Mines: %d, Mines Marked: %d\033[0m\n&quot;</span>,mines,minesMarked);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="prints_8h.html#a2d08c9e8bffe26d1120701e3952fa63e">  114</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="prints_8c.html#a2d08c9e8bffe26d1120701e3952fa63e">printZeroInfo</a>(<span class="keyword">struct</span> <a class="code" href="structmatrix.html">matrix</a> list, <span class="keywordtype">int</span> rows, <span class="keywordtype">int</span> cols){</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">int</span> gesetzt = 0;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">while</span>(gesetzt == 0) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keyword">struct </span><a class="code" href="structmatrix.html">matrix</a> *it = &amp;list;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordtype">int</span> random = rand() % (rows * cols);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="comment">//printf(&quot;%d\n&quot;, random);</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">while</span> (it != NULL) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">if</span> (it-&gt;<a class="code" href="structmatrix.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> == random) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                <span class="keywordflow">if</span> (strcmp(it-&gt;<a class="code" href="structmatrix.html#af3b1cb28c61bd60cb3122742de48c573">hiddenSymbol</a>, <span class="stringliteral">&quot;0&quot;</span>) == 0){</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                    printf(<span class="stringliteral">&quot;There is a Zero at X:%d, Y:%d\n&quot;</span>,it-&gt;<a class="code" href="structmatrix.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>,it-&gt;<a class="code" href="structmatrix.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                    gesetzt++;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            it = it-&gt;<a class="code" href="structmatrix.html#a7e7ed282a62db17266824ee9b4fc6643">next</a>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astructmatrix_html_a7e7ed282a62db17266824ee9b4fc6643"><div class="ttname"><a href="structmatrix.html#a7e7ed282a62db17266824ee9b4fc6643">matrix::next</a></div><div class="ttdeci">struct matrix * next</div><div class="ttdef"><b>Definition:</b> <a href="minesweeper_8h_source.html#l00023">minesweeper.h:23</a></div></div>
@@ -185,7 +184,7 @@ $(document).ready(function(){initNavTree('prints_8c_source.html',''); initResiza
 <div class="ttc" id="astructmatrix_html_a6150e0515f7202e2fb518f7206ed97dc"><div class="ttname"><a href="structmatrix.html#a6150e0515f7202e2fb518f7206ed97dc">matrix::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="minesweeper_8h_source.html#l00018">minesweeper.h:18</a></div></div>
 <div class="ttc" id="aprints_8c_html_ab8e966b12ad31f254cf679d48520d488"><div class="ttname"><a href="prints_8c.html#ab8e966b12ad31f254cf679d48520d488">printError</a></div><div class="ttdeci">int printError(char *text)</div><div class="ttdoc">Prints a red colored text to show an error.</div><div class="ttdef"><b>Definition:</b> <a href="prints_8c_source.html#l00037">prints.c:37</a></div></div>
 <div class="ttc" id="aprints_8c_html_a8e1b3018d60540a60d80dc9dd35f1bc9"><div class="ttname"><a href="prints_8c.html#a8e1b3018d60540a60d80dc9dd35f1bc9">printPublic</a></div><div class="ttdeci">int printPublic(struct matrix list)</div><div class="ttdoc">Prints the public matrix.</div><div class="ttdef"><b>Definition:</b> <a href="prints_8c_source.html#l00055">prints.c:55</a></div></div>
-<div class="ttc" id="aprints_8c_html_a2d08c9e8bffe26d1120701e3952fa63e"><div class="ttname"><a href="prints_8c.html#a2d08c9e8bffe26d1120701e3952fa63e">printZeroInfo</a></div><div class="ttdeci">int printZeroInfo(struct matrix list, int rows, int cols)</div><div class="ttdef"><b>Definition:</b> <a href="prints_8c_source.html#l00115">prints.c:115</a></div></div>
+<div class="ttc" id="aprints_8c_html_a2d08c9e8bffe26d1120701e3952fa63e"><div class="ttname"><a href="prints_8c.html#a2d08c9e8bffe26d1120701e3952fa63e">printZeroInfo</a></div><div class="ttdeci">int printZeroInfo(struct matrix list, int rows, int cols)</div><div class="ttdef"><b>Definition:</b> <a href="prints_8c_source.html#l00114">prints.c:114</a></div></div>
 <div class="ttc" id="aprints_8c_html_a0934dc1a1f500bec39918061ab3650e7"><div class="ttname"><a href="prints_8c.html#a0934dc1a1f500bec39918061ab3650e7">printInfo</a></div><div class="ttdeci">int printInfo(char *text)</div><div class="ttdoc">Prints a green colored text to show info.</div><div class="ttdef"><b>Definition:</b> <a href="prints_8c_source.html#l00046">prints.c:46</a></div></div>
 <div class="ttc" id="aprints_8c_html_a9da04970f8029c42e00913db85bed270"><div class="ttname"><a href="prints_8c.html#a9da04970f8029c42e00913db85bed270">printWarn</a></div><div class="ttdeci">int printWarn(char *text)</div><div class="ttdoc">Prints a yellow colored text to warn.</div><div class="ttdef"><b>Definition:</b> <a href="prints_8c_source.html#l00028">prints.c:28</a></div></div>
 <div class="ttc" id="astructmatrix_html_a0a2f84ed7838f07779ae24c5a9086d33"><div class="ttname"><a href="structmatrix.html#a0a2f84ed7838f07779ae24c5a9086d33">matrix::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> <a href="minesweeper_8h_source.html#l00019">minesweeper.h:19</a></div></div>

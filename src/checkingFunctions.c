@@ -43,13 +43,13 @@ int checkAllMinesMarked(struct matrix list, int mines){
     int countWrongMinesMarked = 0;
     struct matrix *it = &list;
     while (it != NULL) {
-        if (strcmp(it->hiddenSymbol, "M") == 0 && strcmp(it->publicSymbol, "?") == 0) {
+        if (strcmp(it->hiddenSymbol, "M") == 0 && strcmp(it->publicSymbol, "?") == 0) { //marked mine
             countMinesMarked++;
         }
-        if (strcmp(it->hiddenSymbol, "M") != 0 && strcmp(it->publicSymbol, "?") == 0) {
+        if (strcmp(it->hiddenSymbol, "M") != 0 && strcmp(it->publicSymbol, "?") == 0) { //not a mine but marked
             countWrongMinesMarked++;
         }
-        if(countMinesMarked==mines&&countWrongMinesMarked==0){
+        if(countMinesMarked==mines&&countWrongMinesMarked==0){ //if all mines marked and no wrong mines
             return 1;
         }
         it = it->next;
@@ -68,12 +68,11 @@ int checkAllMinesMarked(struct matrix list, int mines){
 int checkAllFieldsOpened(struct matrix list, int rows,int cols, int mines){
     int correctlyOpened = 0;
     struct matrix *it = &list;
-    while (it != NULL) {
+    while (it != NULL) { //if playfield && opened or opened zero
         if(it->x>0&&it->y>0&&((strcmp(it->publicSymbol, it->hiddenSymbol) == 0)||(strcmp(it->publicSymbol, " ") == 0))){
             correctlyOpened++;
         }
-        //printf("Fields counting: %d\n",correctlyOpened);
-        if(correctlyOpened==(rows*cols-rows-cols+1-mines)){
+        if(correctlyOpened==(rows*cols-rows-cols+1-mines)){ //if opened number fields == amount of number fields
             return 1;
         }
         it = it->next;

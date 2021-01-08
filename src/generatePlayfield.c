@@ -17,13 +17,13 @@
  * @param publicSymbol the visible symbol to the player: Nothing or numbers
  * @param hiddenSymbol the hidden symbol to the player: Mines,..
  * @param start the existing matrix list
- * @return 0 when successful, -1 when out of memory
+ * @return 0 when successful, 1 when out of memory
  */
 int insertlist(int x, int y,int index, const char publicSymbol[2], const char hiddenSymbol[2], struct matrix *start) {
     struct matrix *item = malloc(sizeof(struct matrix));
     if (item == NULL) {
         fprintf(stderr, "Out of memory");
-        return -1;
+        return 1;
     }
     item->x = x;
     item->y = y;
@@ -60,20 +60,19 @@ int insertlist(int x, int y,int index, const char publicSymbol[2], const char hi
  * @return 0 when successful, 1 when unsuccessful
  */
 int generateMatrix(int x, int y, int index,char alph,struct matrix *list, int rows, int cols){
-
     for(int i = 0;i<(rows*cols-1);i++){
-        if(index%cols==0){y=0;x++;}
-        if(x==0){
+        if(index%cols==0){y=0;x++;} //end of every row
+        if(x==0){ //first column
             if (insertlist(x,y,index, &alph,&alph,list) != 0) {
                 return 1;
             }
             alph++;
         }else{
-            if(y==0){
+            if(y==0){ //first row
                 if (insertlist(x,y,index, "|","|",list) != 0) {
                     return 1;
                 }
-            }else{
+            }else{ //Playfield
                 if (insertlist(x,y,index, "-","0",list) != 0) {
                     return 1;
                 }
@@ -99,7 +98,7 @@ int setMines(struct matrix list,int mines,int rows,int cols, int minesIndex[mine
         struct matrix *it = &list;
         int random = randomNumber(0,(rows*cols));
         while (it != NULL) {
-            if(it->index==random){
+            if(it->index==random){ //if playfield && not mine
                 if(strcmp(it->publicSymbol,"|")!=0&&strcmp(it->hiddenSymbol,"M")!=0&&isAlphaSwitch(it->publicSymbol[0])==0){
                     strcpy(it->hiddenSymbol, "M");
                     minesIndex[anzGesetzteMinen] = it->index;
@@ -123,7 +122,7 @@ int setMines(struct matrix list,int mines,int rows,int cols, int minesIndex[mine
 int calculateMineValues(struct matrix list,int mines,int cols, const int minesIndex[mines]){
     for(int i = 0; i < mines; i++){
         struct matrix *it = &list;
-        while (it != NULL) {
+        while (it != NULL) { //if mine nearby and field is a number
             if(it->index==minesIndex[i]-1&&strcmp(it->publicSymbol,"|")!=0&&strcmp(it->hiddenSymbol,"M")!=0&&isAlphaSwitch(it->publicSymbol[0])==0){
                 it->hiddenSymbol[0]++;
             }
@@ -167,7 +166,7 @@ int revealFirst(struct matrix list,int rows, int cols){
         struct matrix *it = &list;
         int random = rand() % (rows * cols);
         while (it != NULL) {
-            if (it->index == random) {
+            if (it->index == random) { //if playfield && not mine && not 0
                 if (strcmp(it->publicSymbol, "|") != 0 && strcmp(it->hiddenSymbol, "M") != 0 &&
                     isAlphaSwitch(it->publicSymbol[0]) == 0 && strcmp(it->hiddenSymbol, "0") != 0) {
                     strcpy(it->publicSymbol, it->hiddenSymbol);

@@ -59,7 +59,9 @@ int main(int argc, char* argv[]) {
     }
 
     struct matrix list = {0, 0, 0, "|", " ", NULL};
-    generateMatrix(0, 1, 1, 'A', &list, rows, cols);
+    if(generateMatrix(0, 1, 1, 'A', &list, rows, cols)){
+        exit(1);
+    }
     setMines(list, mines, rows, cols, minesIndex);
     calculateMineValues(list, mines, cols, minesIndex);
     revealFirst(list, rows, cols);
@@ -67,7 +69,9 @@ int main(int argc, char* argv[]) {
     char spielername[256];
     int playedGames =0,gamesWon=0,gamesLost=0,openedCells=0;
     askPlayerInfo(spielername);
-    loadPlayerInfo(spielername,&playedGames,&gamesWon,&gamesLost,&openedCells);
+    if(loadPlayerInfo(spielername,&playedGames,&gamesWon,&gamesLost,&openedCells)==1){
+        exit(1);
+    }
 
     printPublic(list);
 

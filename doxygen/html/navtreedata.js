@@ -25,17 +25,17 @@
 var NAVTREE =
 [
   [ "World of Minesweeper", "index.html", [
-    [ "Minesweeper", "md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e__d_o_x_y.html", [
-      [ "Documentation", "md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e__d_o_x_y.html#autotoc_md1", null ],
-      [ "Compilation", "md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e__d_o_x_y.html#autotoc_md2", null ],
-      [ "Execution", "md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e__d_o_x_y.html#autotoc_md3", [
-        [ "Calling", "md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e__d_o_x_y.html#autotoc_md4", null ],
-        [ "Runtime", "md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e__d_o_x_y.html#autotoc_md5", null ],
-        [ "How to win", "md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e__d_o_x_y.html#autotoc_md6", null ]
+    [ "Minesweeper", "index.html", [
+      [ "Documentation", "index.html#autotoc_md1", null ],
+      [ "Compilation", "index.html#autotoc_md2", null ],
+      [ "Execution", "index.html#autotoc_md3", [
+        [ "Calling", "index.html#autotoc_md4", null ],
+        [ "Runtime", "index.html#autotoc_md5", null ],
+        [ "How to win", "index.html#autotoc_md6", null ]
       ] ],
-      [ "Completed Tasks", "md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e__d_o_x_y.html#autotoc_md7", [
-        [ "Project Tasks", "md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e__d_o_x_y.html#autotoc_md8", null ],
-        [ "Additional features", "md__c___users_simon__c_lion_projects_bic1_prg_tasks_projects_130_minesweeper__r_e_a_d_m_e__d_o_x_y.html#autotoc_md9", null ]
+      [ "Completed Tasks", "index.html#autotoc_md7", [
+        [ "Project Tasks", "index.html#autotoc_md8", null ],
+        [ "Additional features", "index.html#autotoc_md9", null ]
       ] ]
     ] ],
     [ "Data Structures", "annotated.html", [

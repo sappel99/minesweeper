@@ -77,7 +77,7 @@ int findMoreZeroes(struct matrix list,int rows){
 int turnPublicZeroIntoSpace(struct matrix list){
     struct matrix *it = &list;
     while (it != NULL) {
-        if (strcmp(it->hiddenSymbol, "0") == 0 && strcmp(it->publicSymbol, "0") == 0) {
+        if (strcmp(it->hiddenSymbol, "0") == 0 && strcmp(it->publicSymbol, "0") == 0) { //if public zero
             strcpy(it->publicSymbol, " ");
         }
         it = it->next;
@@ -98,7 +98,7 @@ int readAndReveal(struct matrix list,int rows){
         char eingabe[256];
         printf("\033[0;34mEingabe:\033[0m\n");
         scanf("%s", eingabe);
-        if (strncmp(eingabe, "?", 1) == 0) {
+        if (strncmp(eingabe, "?", 1) == 0) { //if Eingabe ?
             eingabe0Fragezeichen=1;
             if (strlen(eingabe) == 3&&isAlphaSwitch(eingabe[1])&&isDigitSwitch(eingabe[2])) {
                 yIn = (unsigned char) eingabe[1] - 64;
@@ -113,7 +113,7 @@ int readAndReveal(struct matrix list,int rows){
                     falscheEingabe=0;
                 }
             }
-        } else {
+        } else { //Kein "?"
             if (strlen(eingabe) == 2&&isAlphaSwitch(eingabe[0])&&isDigitSwitch(eingabe[1])) {
                 yIn = (unsigned char) eingabe[0] - 64;
                 xIn = (unsigned char) eingabe[1] - 48;
@@ -140,7 +140,7 @@ int readAndReveal(struct matrix list,int rows){
     }
 
     struct matrix *it = &list;
-    while (it != NULL) {
+    while (it != NULL) { //do something with the entered field, if its not first row/col && not opened
         if (it->x == xIn && it->y == yIn && it->y > 0 && it->x > 0 && strcmp(it->publicSymbol, it->hiddenSymbol) != 0) {
             if (eingabe0Fragezeichen){
                 strcpy(it->publicSymbol, "?");

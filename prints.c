@@ -101,7 +101,6 @@ int printMineInfo(struct matrix list,int mines){
         }
         it = it->next;
     }
-
     printf("\033[0;32mAll Mines: %d, Mines Marked: %d\033[0m\n",mines,minesMarked);
     return 0;
 }
