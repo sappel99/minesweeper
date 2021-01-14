@@ -35,7 +35,7 @@ int loadPlayerInfo(char spielername[256],int *playedGames, int *gamesWon, int *g
     fptr = fopen(spielername,"r");
     if(fptr == NULL)
     {
-        printf("Player not found!\n");
+        printInfo("Player not found!\n");
         return 0;
     }
     fscanf(fptr, "%s", buff);
@@ -130,7 +130,9 @@ int savePlayerInfo(char spielername[256],int playedGames, int gamesWon, int game
  */
 int saveGame(char spielername[256], struct matrix list){
     FILE *fptr;
-    fptr = fopen("savedGame","w");
+    char savedGameName[266] = "savedGame_";
+    strcat(savedGameName,spielername);
+    fptr = fopen(savedGameName,"w");
     if(fptr == NULL)
     {
         printf("Error in Game file saving!");
@@ -146,6 +148,30 @@ int saveGame(char spielername[256], struct matrix list){
     }
 
     fclose(fptr);
+
+    return 0;
+}
+
+/**
+ * \brief This functions loads the game from a file
+ * @param spielername the player name
+ * @return 0 if successful, 1 if Error
+ */
+int loadPlayerGame(char spielername[256]){
+    FILE *fptr;
+    char savedGameName[266] = "savedGame_";
+    strcat(savedGameName,spielername);
+    fptr = fopen(savedGameName,"r");
+    if(fptr == NULL)
+    {
+        printInfo("No local game found\n");
+        return 1;
+    }else{
+        printInfo("Local game found\n");
+    }
+
+    fclose(fptr);
+    printf("\n");
 
     return 0;
 }

@@ -69,6 +69,7 @@ int main(int argc, char* argv[]) {
     char spielername[256];
     int playedGames =0,gamesWon=0,gamesLost=0,openedCells=0;
     askPlayerInfo(spielername);
+    loadPlayerGame(spielername);
     if(loadPlayerInfo(spielername,&playedGames,&gamesWon,&gamesLost,&openedCells)==1){
         exit(1);
     }

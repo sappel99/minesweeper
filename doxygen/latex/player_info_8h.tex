@@ -16,7 +16,9 @@ int \mbox{\hyperlink{player_info_8h_aea86e3a1a9c87a719ef5f7ee5f59265e}{load\+Pla
 int \mbox{\hyperlink{player_info_8h_a0ec4485ee4b552f8de8cf3b1dee12893}{save\+Player\+Info}} (char spielername\mbox{[}256\mbox{]}, int played\+Games, int games\+Won, int games\+Lost, int opened\+Cells)
 \begin{DoxyCompactList}\small\item\em This function saves the statistics into a local file. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{player_info_8h_aef86fd3cd76a83217fd07dfc5860a562}{save\+Game}} (char spielername\mbox{[}256\mbox{]}, struct \mbox{\hyperlink{structmatrix}{matrix}} list)
-\begin{DoxyCompactList}\small\item\em This function saves the game matrix into a local file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This function saves the game matrix into a local file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{player_info_8h_ab50929c0479f0cb22c6461a65c62b182}{load\+Player\+Game}} (char spielername\mbox{[}256\mbox{]})
+\begin{DoxyCompactList}\small\item\em This functions loads the game from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -46,6 +48,28 @@ This function asks for the player name.
 
 
 Definition at line 18 of file player\+Info.\+c.
+
+\mbox{\Hypertarget{player_info_8h_ab50929c0479f0cb22c6461a65c62b182}\label{player_info_8h_ab50929c0479f0cb22c6461a65c62b182}} 
+\index{playerInfo.h@{playerInfo.h}!loadPlayerGame@{loadPlayerGame}}
+\index{loadPlayerGame@{loadPlayerGame}!playerInfo.h@{playerInfo.h}}
+\doxysubsubsection{\texorpdfstring{loadPlayerGame()}{loadPlayerGame()}}
+{\footnotesize\ttfamily int load\+Player\+Game (\begin{DoxyParamCaption}\item[{char}]{spielername\mbox{[}256\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This functions loads the game from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spielername} & the player name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, 1 if Error 
+\end{DoxyReturn}
+
+
+Definition at line 160 of file player\+Info.\+c.
 
 \mbox{\Hypertarget{player_info_8h_aea86e3a1a9c87a719ef5f7ee5f59265e}\label{player_info_8h_aea86e3a1a9c87a719ef5f7ee5f59265e}} 
 \index{playerInfo.h@{playerInfo.h}!loadPlayerInfo@{loadPlayerInfo}}
